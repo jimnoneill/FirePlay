@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a",
+  "command": "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi28 --sysroot=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dfireplay_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -o CMakeFiles\\fireplay.dir\\fireplay_jni.cpp.o -c C:\\fireplay\\app\\src\\main\\cpp\\fireplay_jni.cpp",
+  "file": "C:\\fireplay\\app\\src\\main\\cpp\\fireplay_jni.cpp"
+}
+]

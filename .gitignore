@@ -1,0 +1,12 @@
+build/
+*.o
+*.a
+*.so
+*.apk
+*.keystore
+.idea/
+.gradle/
+local.properties
+ndk/
+android-ndk*.zip
+*.log

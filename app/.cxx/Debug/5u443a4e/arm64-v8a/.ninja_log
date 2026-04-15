@@ -1,0 +1,5 @@
+# ninja log v5
+1	14399	7978953935554988	CMakeFiles/fireplay.dir/fireplay_jni.cpp.o	40769d7d2e87a5e1
+14416	14636	7978953937849377	C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so	9a3a9dc74514bbfa
+6	1107	7978959383341766	CMakeFiles/fireplay.dir/fireplay_jni.cpp.o	40769d7d2e87a5e1
+1109	1282	7978959385086409	C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so	9a3a9dc74514bbfa

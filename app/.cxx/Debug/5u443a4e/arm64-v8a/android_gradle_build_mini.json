@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "C:\\fireplay\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\fireplay\\app\\.cxx\\Debug\\5u443a4e\\arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\fireplay\\app\\.cxx\\Debug\\5u443a4e\\arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "fireplay::@6890427a1f51a3e7e1df": {
+      "artifactName": "fireplay",
+      "abi": "arm64-v8a",
+      "output": "C:\\fireplay\\app\\build\\intermediates\\cxx\\Debug\\5u443a4e\\obj\\arm64-v8a\\libfireplay.so",
+      "runtimeFiles": []
+    }
+  }
+}
