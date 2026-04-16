@@ -17,6 +17,12 @@
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
+    "alac_dec::@6890427a1f51a3e7e1df": {
+      "artifactName": "alac_dec",
+      "abi": "arm64-v8a",
+      "output": "C:\\fireplay\\app\\.cxx\\Debug\\5u443a4e\\arm64-v8a\\libalac_dec.a",
+      "runtimeFiles": []
+    },
     "airplay::@6890427a1f51a3e7e1df": {
       "artifactName": "airplay",
       "abi": "arm64-v8a",

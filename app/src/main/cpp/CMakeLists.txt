@@ -7,6 +7,19 @@ set(CMAKE_CXX_STANDARD 17)
 set(LIB_UXPLAY ${CMAKE_SOURCE_DIR}/../../../../lib-uxplay)
 set(KDAB_OPENSSL ${CMAKE_SOURCE_DIR}/../../../../third_party/android_openssl)
 set(LIBPLIST ${CMAKE_SOURCE_DIR}/../../../../third_party/libplist)
+set(ALAC ${CMAKE_SOURCE_DIR}/../../../../third_party/alac)
+
+# ALAC decoder (Apple official). Compile decoder + bit/endian/codec helpers.
+add_library(alac_dec STATIC
+    ${ALAC}/codec/ALACDecoder.cpp
+    ${ALAC}/codec/ALACBitUtilities.c
+    ${ALAC}/codec/EndianPortable.c
+    ${ALAC}/codec/ag_dec.c
+    ${ALAC}/codec/dp_dec.c
+    ${ALAC}/codec/matrix_dec.c
+)
+target_include_directories(alac_dec PUBLIC ${ALAC}/codec)
+target_compile_definitions(alac_dec PRIVATE -DTARGET_OS_GENERIC=1 -DTARGET_RT_LITTLE_ENDIAN=1)
 
 # libplist (vendored upstream src; pure C, no autotools)
 file(GLOB LIBPLIST_C ${LIBPLIST}/src/*.c)
@@ -66,6 +79,8 @@ target_compile_definitions(airplay PRIVATE
 target_link_libraries(airplay PUBLIC llhttp playfair plist crypto_static)
 
 # JNI bridge → libfireplay.so (loaded by Java System.loadLibrary)
-add_library(fireplay SHARED fireplay_jni.cpp)
+add_library(fireplay SHARED fireplay_jni.cpp audio_renderer_aaudio.cpp)
+target_include_directories(fireplay PRIVATE ${ALAC}/codec)
 find_library(log-lib log)
-target_link_libraries(fireplay airplay ${log-lib})
+find_library(aaudio-lib aaudio)
+target_link_libraries(fireplay airplay alac_dec ${log-lib} ${aaudio-lib})

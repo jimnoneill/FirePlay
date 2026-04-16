@@ -23,6 +23,12 @@
       "artifactName": "airplay",
       "output": "C:\\fireplay\\app\\.cxx\\Debug\\5u443a4e\\armeabi-v7a\\libairplay.a"
     },
+    "alac_dec::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "armeabi-v7a",
+      "artifactName": "alac_dec",
+      "output": "C:\\fireplay\\app\\.cxx\\Debug\\5u443a4e\\armeabi-v7a\\libalac_dec.a"
+    },
     "fireplay::@6890427a1f51a3e7e1df": {
       "toolchain": "toolchain",
       "abi": "armeabi-v7a",

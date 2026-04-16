@@ -1,6 +1,36 @@
 [
 {
   "directory": "C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a",
+  "command": "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi28 --sysroot=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DTARGET_OS_GENERIC=1 -DTARGET_RT_LITTLE_ENDIAN=1 -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -o CMakeFiles\\alac_dec.dir\\C_\\fireplay\\third_party\\alac\\codec\\ALACDecoder.cpp.o -c C:\\fireplay\\third_party\\alac\\codec\\ALACDecoder.cpp",
+  "file": "C:\\fireplay\\third_party\\alac\\codec\\ALACDecoder.cpp"
+},
+{
+  "directory": "C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a",
+  "command": "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi28 --sysroot=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DTARGET_OS_GENERIC=1 -DTARGET_RT_LITTLE_ENDIAN=1 -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11 -o CMakeFiles\\alac_dec.dir\\C_\\fireplay\\third_party\\alac\\codec\\ALACBitUtilities.c.o -c C:\\fireplay\\third_party\\alac\\codec\\ALACBitUtilities.c",
+  "file": "C:\\fireplay\\third_party\\alac\\codec\\ALACBitUtilities.c"
+},
+{
+  "directory": "C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a",
+  "command": "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi28 --sysroot=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DTARGET_OS_GENERIC=1 -DTARGET_RT_LITTLE_ENDIAN=1 -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11 -o CMakeFiles\\alac_dec.dir\\C_\\fireplay\\third_party\\alac\\codec\\EndianPortable.c.o -c C:\\fireplay\\third_party\\alac\\codec\\EndianPortable.c",
+  "file": "C:\\fireplay\\third_party\\alac\\codec\\EndianPortable.c"
+},
+{
+  "directory": "C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a",
+  "command": "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi28 --sysroot=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DTARGET_OS_GENERIC=1 -DTARGET_RT_LITTLE_ENDIAN=1 -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11 -o CMakeFiles\\alac_dec.dir\\C_\\fireplay\\third_party\\alac\\codec\\ag_dec.c.o -c C:\\fireplay\\third_party\\alac\\codec\\ag_dec.c",
+  "file": "C:\\fireplay\\third_party\\alac\\codec\\ag_dec.c"
+},
+{
+  "directory": "C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a",
+  "command": "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi28 --sysroot=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DTARGET_OS_GENERIC=1 -DTARGET_RT_LITTLE_ENDIAN=1 -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11 -o CMakeFiles\\alac_dec.dir\\C_\\fireplay\\third_party\\alac\\codec\\dp_dec.c.o -c C:\\fireplay\\third_party\\alac\\codec\\dp_dec.c",
+  "file": "C:\\fireplay\\third_party\\alac\\codec\\dp_dec.c"
+},
+{
+  "directory": "C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a",
+  "command": "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi28 --sysroot=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DTARGET_OS_GENERIC=1 -DTARGET_RT_LITTLE_ENDIAN=1 -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11 -o CMakeFiles\\alac_dec.dir\\C_\\fireplay\\third_party\\alac\\codec\\matrix_dec.c.o -c C:\\fireplay\\third_party\\alac\\codec\\matrix_dec.c",
+  "file": "C:\\fireplay\\third_party\\alac\\codec\\matrix_dec.c"
+},
+{
+  "directory": "C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a",
   "command": "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi28 --sysroot=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot -DHAVE_CONFIG_H=1 -D_GNU_SOURCE -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11 -o CMakeFiles\\plist.dir\\C_\\fireplay\\third_party\\libplist\\src\\base64.c.o -c C:\\fireplay\\third_party\\libplist\\src\\base64.c",
   "file": "C:\\fireplay\\third_party\\libplist\\src\\base64.c"
 },
@@ -221,7 +251,12 @@
 },
 {
   "directory": "C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a",
-  "command": "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi28 --sysroot=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dfireplay_EXPORTS -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -o CMakeFiles\\fireplay.dir\\fireplay_jni.cpp.o -c C:\\fireplay\\app\\src\\main\\cpp\\fireplay_jni.cpp",
+  "command": "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi28 --sysroot=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dfireplay_EXPORTS -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -o CMakeFiles\\fireplay.dir\\fireplay_jni.cpp.o -c C:\\fireplay\\app\\src\\main\\cpp\\fireplay_jni.cpp",
   "file": "C:\\fireplay\\app\\src\\main\\cpp\\fireplay_jni.cpp"
+},
+{
+  "directory": "C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a",
+  "command": "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=armv7-none-linux-androideabi28 --sysroot=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dfireplay_EXPORTS -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC -o CMakeFiles\\fireplay.dir\\audio_renderer_aaudio.cpp.o -c C:\\fireplay\\app\\src\\main\\cpp\\audio_renderer_aaudio.cpp",
+  "file": "C:\\fireplay\\app\\src\\main\\cpp\\audio_renderer_aaudio.cpp"
 }
 ]

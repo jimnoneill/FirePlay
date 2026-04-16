@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libplayfair.a"
+			"path" : "libllhttp.a"
 		}
 	],
 	"backtrace" : 1,
@@ -26,19 +26,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 35,
+				"line" : 43,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 36,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 37,
+				"line" : 44,
 				"parent" : 0
 			}
 		]
@@ -59,11 +53,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "C:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair"
-				},
-				{
-					"backtrace" : 3,
-					"path" : "C:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include"
+					"path" : "C:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp"
 				}
 			],
 			"language" : "C",
@@ -79,9 +69,7 @@
 			[
 				0,
 				1,
-				2,
-				3,
-				4
+				2
 			],
 			"sysroot" : 
 			{
@@ -89,9 +77,9 @@
 			}
 		}
 	],
-	"id" : "playfair::@6890427a1f51a3e7e1df",
-	"name" : "playfair",
-	"nameOnDisk" : "libplayfair.a",
+	"id" : "llhttp::@6890427a1f51a3e7e1df",
+	"name" : "llhttp",
+	"nameOnDisk" : "libllhttp.a",
 	"paths" : 
 	{
 		"build" : ".",
@@ -105,9 +93,7 @@
 			[
 				0,
 				1,
-				2,
-				3,
-				4
+				2
 			]
 		}
 	],
@@ -116,31 +102,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "C:/fireplay/lib-uxplay/playfair/hand_garble.c",
+			"path" : "C:/fireplay/lib-uxplay/llhttp/api.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "C:/fireplay/lib-uxplay/playfair/modified_md5.c",
+			"path" : "C:/fireplay/lib-uxplay/llhttp/http.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "C:/fireplay/lib-uxplay/playfair/omg_hax.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "C:/fireplay/lib-uxplay/playfair/playfair.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "C:/fireplay/lib-uxplay/playfair/sap_hash.c",
+			"path" : "C:/fireplay/lib-uxplay/llhttp/llhttp.c",
 			"sourceGroupIndex" : 0
 		}
 	],

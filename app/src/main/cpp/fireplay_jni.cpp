@@ -13,6 +13,7 @@ extern "C" {
 #include "../../../../lib-uxplay/logger.h"
 #include "../../../../lib-uxplay/stream.h"
 }
+#include "audio_renderer_aaudio.h"
 
 #define TAG "FirePlay-jni"
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO,  TAG, __VA_ARGS__)
@@ -32,15 +33,20 @@ void log_cb(void *, int level, const char *msg) {
     __android_log_print(prio, "FirePlay-uxplay", "%s", msg);
 }
 
-void cb_audio_process(void *, raop_ntp_t *, audio_decode_struct *)            {}
+void cb_audio_process(void *, raop_ntp_t *, audio_decode_struct *data) {
+    if (!data || data->data_len <= 0) return;
+    if (data->ct == 2) {
+        fireplay_audio_push_alac(data->data, data->data_len);
+    }
+}
+void cb_conn_init_renderer(void *)    { fireplay_audio_init();     LOGI("conn_init"); }
+void cb_conn_destroy_renderer(void *) { fireplay_audio_shutdown(); LOGI("conn_destroy"); }
 void cb_video_process(void *, raop_ntp_t *, video_decode_struct *)            {}
 void cb_video_pause  (void *)                                                  {}
 void cb_video_resume (void *)                                                  {}
 void cb_conn_feedback(void *)                                                  {}
 void cb_conn_reset   (void *, int reason)                                      { LOGI("conn_reset reason=%d", reason); }
 void cb_video_reset  (void *, reset_type_t)                                    {}
-void cb_conn_init    (void *)                                                  { LOGI("conn_init"); }
-void cb_conn_destroy (void *)                                                  { LOGI("conn_destroy"); }
 void cb_conn_teardown(void *, bool *t96, bool *t110)                           { if (t96) *t96 = false; if (t110) *t110 = false; }
 void cb_audio_flush  (void *)                                                  {}
 void cb_video_flush  (void *)                                                  {}
@@ -102,8 +108,8 @@ Java_org_fireplay_MainActivity_nativeStart(JNIEnv *env, jclass, jstring jname, j
     cb.conn_feedback = cb_conn_feedback;
     cb.conn_reset = cb_conn_reset;
     cb.video_reset = cb_video_reset;
-    cb.conn_init = cb_conn_init;
-    cb.conn_destroy = cb_conn_destroy;
+    cb.conn_init = cb_conn_init_renderer;
+    cb.conn_destroy = cb_conn_destroy_renderer;
     cb.conn_teardown = cb_conn_teardown;
     cb.audio_flush = cb_audio_flush;
     cb.video_flush = cb_video_flush;

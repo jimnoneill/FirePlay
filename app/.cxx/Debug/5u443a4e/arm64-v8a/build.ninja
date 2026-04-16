@@ -41,6 +41,79 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/fireplay/app/.cxx/Debug/5u443a4e/arm64-v8a/
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target alac_dec
+
+
+#############################################
+# Order-only phony target for alac_dec
+
+build cmake_object_order_depends_target_alac_dec: phony || CMakeFiles/alac_dec.dir
+
+build CMakeFiles/alac_dec.dir/C_/fireplay/third_party/alac/codec/ALACDecoder.cpp.o: CXX_COMPILER__alac_dec_Debug C$:/fireplay/third_party/alac/codec/ALACDecoder.cpp || cmake_object_order_depends_target_alac_dec
+  DEFINES = -DTARGET_OS_GENERIC=1 -DTARGET_RT_LITTLE_ENDIAN=1
+  DEP_FILE = CMakeFiles\alac_dec.dir\C_\fireplay\third_party\alac\codec\ALACDecoder.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec
+  OBJECT_DIR = CMakeFiles\alac_dec.dir
+  OBJECT_FILE_DIR = CMakeFiles\alac_dec.dir\C_\fireplay\third_party\alac\codec
+
+build CMakeFiles/alac_dec.dir/C_/fireplay/third_party/alac/codec/ALACBitUtilities.c.o: C_COMPILER__alac_dec_Debug C$:/fireplay/third_party/alac/codec/ALACBitUtilities.c || cmake_object_order_depends_target_alac_dec
+  DEFINES = -DTARGET_OS_GENERIC=1 -DTARGET_RT_LITTLE_ENDIAN=1
+  DEP_FILE = CMakeFiles\alac_dec.dir\C_\fireplay\third_party\alac\codec\ALACBitUtilities.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec
+  OBJECT_DIR = CMakeFiles\alac_dec.dir
+  OBJECT_FILE_DIR = CMakeFiles\alac_dec.dir\C_\fireplay\third_party\alac\codec
+
+build CMakeFiles/alac_dec.dir/C_/fireplay/third_party/alac/codec/EndianPortable.c.o: C_COMPILER__alac_dec_Debug C$:/fireplay/third_party/alac/codec/EndianPortable.c || cmake_object_order_depends_target_alac_dec
+  DEFINES = -DTARGET_OS_GENERIC=1 -DTARGET_RT_LITTLE_ENDIAN=1
+  DEP_FILE = CMakeFiles\alac_dec.dir\C_\fireplay\third_party\alac\codec\EndianPortable.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec
+  OBJECT_DIR = CMakeFiles\alac_dec.dir
+  OBJECT_FILE_DIR = CMakeFiles\alac_dec.dir\C_\fireplay\third_party\alac\codec
+
+build CMakeFiles/alac_dec.dir/C_/fireplay/third_party/alac/codec/ag_dec.c.o: C_COMPILER__alac_dec_Debug C$:/fireplay/third_party/alac/codec/ag_dec.c || cmake_object_order_depends_target_alac_dec
+  DEFINES = -DTARGET_OS_GENERIC=1 -DTARGET_RT_LITTLE_ENDIAN=1
+  DEP_FILE = CMakeFiles\alac_dec.dir\C_\fireplay\third_party\alac\codec\ag_dec.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec
+  OBJECT_DIR = CMakeFiles\alac_dec.dir
+  OBJECT_FILE_DIR = CMakeFiles\alac_dec.dir\C_\fireplay\third_party\alac\codec
+
+build CMakeFiles/alac_dec.dir/C_/fireplay/third_party/alac/codec/dp_dec.c.o: C_COMPILER__alac_dec_Debug C$:/fireplay/third_party/alac/codec/dp_dec.c || cmake_object_order_depends_target_alac_dec
+  DEFINES = -DTARGET_OS_GENERIC=1 -DTARGET_RT_LITTLE_ENDIAN=1
+  DEP_FILE = CMakeFiles\alac_dec.dir\C_\fireplay\third_party\alac\codec\dp_dec.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec
+  OBJECT_DIR = CMakeFiles\alac_dec.dir
+  OBJECT_FILE_DIR = CMakeFiles\alac_dec.dir\C_\fireplay\third_party\alac\codec
+
+build CMakeFiles/alac_dec.dir/C_/fireplay/third_party/alac/codec/matrix_dec.c.o: C_COMPILER__alac_dec_Debug C$:/fireplay/third_party/alac/codec/matrix_dec.c || cmake_object_order_depends_target_alac_dec
+  DEFINES = -DTARGET_OS_GENERIC=1 -DTARGET_RT_LITTLE_ENDIAN=1
+  DEP_FILE = CMakeFiles\alac_dec.dir\C_\fireplay\third_party\alac\codec\matrix_dec.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec
+  OBJECT_DIR = CMakeFiles\alac_dec.dir
+  OBJECT_FILE_DIR = CMakeFiles\alac_dec.dir\C_\fireplay\third_party\alac\codec
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target alac_dec
+
+
+#############################################
+# Link the static library libalac_dec.a
+
+build libalac_dec.a: CXX_STATIC_LIBRARY_LINKER__alac_dec_Debug CMakeFiles/alac_dec.dir/C_/fireplay/third_party/alac/codec/ALACDecoder.cpp.o CMakeFiles/alac_dec.dir/C_/fireplay/third_party/alac/codec/ALACBitUtilities.c.o CMakeFiles/alac_dec.dir/C_/fireplay/third_party/alac/codec/EndianPortable.c.o CMakeFiles/alac_dec.dir/C_/fireplay/third_party/alac/codec/ag_dec.c.o CMakeFiles/alac_dec.dir/C_/fireplay/third_party/alac/codec/dp_dec.c.o CMakeFiles/alac_dec.dir/C_/fireplay/third_party/alac/codec/matrix_dec.c.o
+  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info
+  OBJECT_DIR = CMakeFiles\alac_dec.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = libalac_dec.a
+  TARGET_PDB = alac_dec.a.dbg
+
+# =============================================================================
 # Object build statements for STATIC_LIBRARY target plist
 
 
@@ -491,13 +564,21 @@ build libairplay.a: C_STATIC_LIBRARY_LINKER__airplay_Debug CMakeFiles/airplay.di
 #############################################
 # Order-only phony target for fireplay
 
-build cmake_object_order_depends_target_fireplay: phony || cmake_object_order_depends_target_airplay cmake_object_order_depends_target_llhttp cmake_object_order_depends_target_playfair cmake_object_order_depends_target_plist
+build cmake_object_order_depends_target_fireplay: phony || cmake_object_order_depends_target_airplay cmake_object_order_depends_target_alac_dec cmake_object_order_depends_target_llhttp cmake_object_order_depends_target_playfair cmake_object_order_depends_target_plist
 
 build CMakeFiles/fireplay.dir/fireplay_jni.cpp.o: CXX_COMPILER__fireplay_Debug C$:/fireplay/app/src/main/cpp/fireplay_jni.cpp || cmake_object_order_depends_target_fireplay
   DEFINES = -Dfireplay_EXPORTS
   DEP_FILE = CMakeFiles\fireplay.dir\fireplay_jni.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC
-  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\fireplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\fireplay.dir
+
+build CMakeFiles/fireplay.dir/audio_renderer_aaudio.cpp.o: CXX_COMPILER__fireplay_Debug C$:/fireplay/app/src/main/cpp/audio_renderer_aaudio.cpp || cmake_object_order_depends_target_fireplay
+  DEFINES = -Dfireplay_EXPORTS
+  DEP_FILE = CMakeFiles\fireplay.dir\audio_renderer_aaudio.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
   OBJECT_DIR = CMakeFiles\fireplay.dir
   OBJECT_FILE_DIR = CMakeFiles\fireplay.dir
 
@@ -509,10 +590,10 @@ build CMakeFiles/fireplay.dir/fireplay_jni.cpp.o: CXX_COMPILER__fireplay_Debug C
 #############################################
 # Link the shared library C:\fireplay\app\build\intermediates\cxx\Debug\5u443a4e\obj\arm64-v8a\libfireplay.so
 
-build C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so: CXX_SHARED_LIBRARY_LINKER__fireplay_Debug CMakeFiles/fireplay.dir/fireplay_jni.cpp.o | libairplay.a C$:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/liblog.so libllhttp.a libplayfair.a libplist.a C$:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/arm64-v8a/libcrypto.a || libairplay.a libllhttp.a libplayfair.a libplist.a
+build C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so: CXX_SHARED_LIBRARY_LINKER__fireplay_Debug CMakeFiles/fireplay.dir/fireplay_jni.cpp.o CMakeFiles/fireplay.dir/audio_renderer_aaudio.cpp.o | libairplay.a libalac_dec.a C$:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/liblog.so C$:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libaaudio.so libllhttp.a libplayfair.a libplist.a C$:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/arm64-v8a/libcrypto.a || libairplay.a libalac_dec.a libllhttp.a libplayfair.a libplist.a
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info
   LINK_FLAGS = -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments
-  LINK_LIBRARIES = libairplay.a  C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/liblog.so  libllhttp.a  libplayfair.a  libplist.a  C:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/arm64-v8a/libcrypto.a  -latomic -lm
+  LINK_LIBRARIES = libairplay.a  libalac_dec.a  C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/liblog.so  C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libaaudio.so  libllhttp.a  libplayfair.a  libplist.a  C:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/arm64-v8a/libcrypto.a  -latomic -lm
   OBJECT_DIR = CMakeFiles\fireplay.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -549,6 +630,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build airplay: phony libairplay.a
 
+build alac_dec: phony libalac_dec.a
+
 build fireplay: phony C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so
 
 build libfireplay.so: phony C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so
@@ -567,7 +650,7 @@ build plist: phony libplist.a
 #############################################
 # Folder: C:/fireplay/app/.cxx/Debug/5u443a4e/arm64-v8a
 
-build all: phony libplist.a libllhttp.a libplayfair.a libairplay.a C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so
+build all: phony libalac_dec.a libplist.a libllhttp.a libplayfair.a libairplay.a C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so
 
 # =============================================================================
 # Built-in targets

@@ -1,3 +1,4 @@
+C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a/CMakeFiles/alac_dec.dir
 C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a/CMakeFiles/plist.dir
 C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a/CMakeFiles/llhttp.dir
 C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a/CMakeFiles/playfair.dir

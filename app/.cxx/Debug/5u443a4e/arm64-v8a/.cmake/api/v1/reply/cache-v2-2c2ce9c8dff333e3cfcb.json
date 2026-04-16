@@ -1254,6 +1254,18 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "aaudio-lib",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libaaudio.so"
+		},
+		{
 			"name" : "fireplay_BINARY_DIR",
 			"properties" : 
 			[
