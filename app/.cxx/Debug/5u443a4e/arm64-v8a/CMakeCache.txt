@@ -245,6 +245,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Path to a library.
 aaudio-lib:FILEPATH=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libaaudio.so
 
+//Path to a library.
+android-lib:FILEPATH=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libandroid.so
+
 //Value Computed by CMake
 fireplay_BINARY_DIR:STATIC=C:/fireplay/app/.cxx/Debug/5u443a4e/arm64-v8a
 
@@ -256,6 +259,9 @@ fireplay_SOURCE_DIR:STATIC=C:/fireplay/app/src/main/cpp
 
 //Path to a library.
 log-lib:FILEPATH=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/liblog.so
+
+//Path to a library.
+mediandk-lib:FILEPATH=C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libmediandk.so
 
 
 ########################

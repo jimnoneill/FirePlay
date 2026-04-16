@@ -582,6 +582,14 @@ build CMakeFiles/fireplay.dir/audio_renderer_aaudio.cpp.o: CXX_COMPILER__firepla
   OBJECT_DIR = CMakeFiles\fireplay.dir
   OBJECT_FILE_DIR = CMakeFiles\fireplay.dir
 
+build CMakeFiles/fireplay.dir/video_renderer_mediacodec.cpp.o: CXX_COMPILER__fireplay_Debug C$:/fireplay/app/src/main/cpp/video_renderer_mediacodec.cpp || cmake_object_order_depends_target_fireplay
+  DEFINES = -Dfireplay_EXPORTS
+  DEP_FILE = CMakeFiles\fireplay.dir\video_renderer_mediacodec.cpp.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/alac/codec -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\fireplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\fireplay.dir
+
 
 # =============================================================================
 # Link build statements for SHARED_LIBRARY target fireplay
@@ -590,10 +598,10 @@ build CMakeFiles/fireplay.dir/audio_renderer_aaudio.cpp.o: CXX_COMPILER__firepla
 #############################################
 # Link the shared library C:\fireplay\app\build\intermediates\cxx\Debug\5u443a4e\obj\arm64-v8a\libfireplay.so
 
-build C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so: CXX_SHARED_LIBRARY_LINKER__fireplay_Debug CMakeFiles/fireplay.dir/fireplay_jni.cpp.o CMakeFiles/fireplay.dir/audio_renderer_aaudio.cpp.o | libairplay.a libalac_dec.a C$:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/liblog.so C$:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libaaudio.so libllhttp.a libplayfair.a libplist.a C$:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/arm64-v8a/libcrypto.a || libairplay.a libalac_dec.a libllhttp.a libplayfair.a libplist.a
+build C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so: CXX_SHARED_LIBRARY_LINKER__fireplay_Debug CMakeFiles/fireplay.dir/fireplay_jni.cpp.o CMakeFiles/fireplay.dir/audio_renderer_aaudio.cpp.o CMakeFiles/fireplay.dir/video_renderer_mediacodec.cpp.o | libairplay.a libalac_dec.a C$:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/liblog.so C$:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libaaudio.so C$:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libandroid.so C$:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libmediandk.so libllhttp.a libplayfair.a libplist.a C$:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/arm64-v8a/libcrypto.a || libairplay.a libalac_dec.a libllhttp.a libplayfair.a libplist.a
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info
   LINK_FLAGS = -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments
-  LINK_LIBRARIES = libairplay.a  libalac_dec.a  C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/liblog.so  C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libaaudio.so  libllhttp.a  libplayfair.a  libplist.a  C:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/arm64-v8a/libcrypto.a  -latomic -lm
+  LINK_LIBRARIES = libairplay.a  libalac_dec.a  C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/liblog.so  C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libaaudio.so  C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libandroid.so  C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/28/libmediandk.so  libllhttp.a  libplayfair.a  libplist.a  C:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/arm64-v8a/libcrypto.a  -latomic -lm
   OBJECT_DIR = CMakeFiles\fireplay.dir
   POST_BUILD = cd .
   PRE_LINK = cd .

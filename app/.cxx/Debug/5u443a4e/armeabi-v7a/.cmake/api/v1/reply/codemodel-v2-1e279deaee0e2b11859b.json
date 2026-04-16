@@ -49,42 +49,42 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "airplay::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-airplay-Debug-f3eac92fdfb9978f6091.json",
+					"jsonFile" : "target-airplay-Debug-186c711967c0c89bb7a5.json",
 					"name" : "airplay",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "alac_dec::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-alac_dec-Debug-ff7c31b37ae32cf4f06e.json",
+					"jsonFile" : "target-alac_dec-Debug-9e2a42ec0dfcf2299994.json",
 					"name" : "alac_dec",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "fireplay::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-fireplay-Debug-3d83c684206bd501a8cd.json",
+					"jsonFile" : "target-fireplay-Debug-b7a5de3264090af009a3.json",
 					"name" : "fireplay",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "llhttp::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-llhttp-Debug-d518f3e3faf698a35e32.json",
+					"jsonFile" : "target-llhttp-Debug-f00b2c2629d621648a86.json",
 					"name" : "llhttp",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "playfair::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-playfair-Debug-931348b3093ecd6c3d4b.json",
+					"jsonFile" : "target-playfair-Debug-e4d4c141f41c06503503.json",
 					"name" : "playfair",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "plist::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-plist-Debug-bb8e4b1870b74e38da19.json",
+					"jsonFile" : "target-plist-Debug-f4d06798b67229d91635.json",
 					"name" : "plist",
 					"projectIndex" : 0
 				}
@@ -94,7 +94,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/fireplay/app/.cxx/Debug/5u443a4e/arm64-v8a",
+		"build" : "C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a",
 		"source" : "C:/fireplay/app/src/main/cpp"
 	},
 	"version" : 

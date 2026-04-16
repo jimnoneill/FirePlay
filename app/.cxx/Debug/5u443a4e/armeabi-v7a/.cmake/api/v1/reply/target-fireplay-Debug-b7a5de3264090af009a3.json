@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so"
+			"path" : "C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so"
 		}
 	],
 	"backtrace" : 1,
@@ -32,13 +32,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 86,
+				"line" : 92,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 83,
+				"line" : 87,
 				"parent" : 0
 			}
 		]
@@ -49,7 +49,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC"
+					"fragment" : "-g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC"
 				}
 			],
 			"defines" : 
@@ -105,7 +105,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			],
 			"sysroot" : 
 			{
@@ -157,12 +158,22 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\28\\liblog.so",
+				"fragment" : "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\arm-linux-androideabi\\28\\liblog.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\aarch64-linux-android\\28\\libaaudio.so",
+				"fragment" : "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\arm-linux-androideabi\\28\\libaaudio.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\arm-linux-androideabi\\28\\libandroid.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\arm-linux-androideabi\\28\\libmediandk.so",
 				"role" : "libraries"
 			},
 			{
@@ -178,7 +189,7 @@
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "C:\\fireplay\\app\\src\\main\\cpp\\..\\..\\..\\..\\third_party\\android_openssl\\ssl_3\\arm64-v8a\\libcrypto.a",
+				"fragment" : "C:\\fireplay\\app\\src\\main\\cpp\\..\\..\\..\\..\\third_party\\android_openssl\\ssl_3\\armeabi-v7a\\libcrypto.a",
 				"role" : "libraries"
 			},
 			{
@@ -206,7 +217,8 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2
 			]
 		}
 	],
@@ -222,6 +234,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "audio_renderer_aaudio.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "video_renderer_mediacodec.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -14,6 +14,8 @@ extern "C" {
 #include "../../../../lib-uxplay/stream.h"
 }
 #include "audio_renderer_aaudio.h"
+#include "video_renderer_mediacodec.h"
+#include <android/native_window_jni.h>
 
 #define TAG "FirePlay-jni"
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO,  TAG, __VA_ARGS__)
@@ -41,7 +43,10 @@ void cb_audio_process(void *, raop_ntp_t *, audio_decode_struct *data) {
 }
 void cb_conn_init_renderer(void *)    { fireplay_audio_init();     LOGI("conn_init"); }
 void cb_conn_destroy_renderer(void *) { fireplay_audio_shutdown(); LOGI("conn_destroy"); }
-void cb_video_process(void *, raop_ntp_t *, video_decode_struct *)            {}
+void cb_video_process(void *, raop_ntp_t *, video_decode_struct *data) {
+    if (!data || data->data_len <= 0) return;
+    fireplay_video_push_nal(data->data, data->data_len, data->ntp_time_local);
+}
 void cb_video_pause  (void *)                                                  {}
 void cb_video_resume (void *)                                                  {}
 void cb_conn_feedback(void *)                                                  {}
@@ -76,7 +81,11 @@ void cb_register_client(void *, const char *device_id, const char *pk_str, const
 bool cb_check_register(void *, const char *)                                   { return true; }
 const char *cb_passwd(void *, int *len)                                        { if (len) *len = 0; return nullptr; }
 void cb_export_dacp(void *, const char *, const char *)                        {}
-int  cb_video_set_codec(void *, video_codec_t codec)                           { LOGI("video_codec=%d", codec); return 0; }
+int  cb_video_set_codec(void *, video_codec_t codec) {
+    LOGI("video_codec=%d", codec);
+    fireplay_video_set_codec(codec == VIDEO_CODEC_H265 ? 1 : 0);
+    return 0;
+}
 void cb_on_video_play (void *, const char *, const float)                      {}
 void cb_on_video_scrub(void *, const float)                                    {}
 void cb_on_video_rate (void *, const float)                                    {}
@@ -188,7 +197,19 @@ Java_org_fireplay_MainActivity_nativeStop(JNIEnv *, jclass) {
     LOGI("nativeStop");
     if (g_raop) { raop_stop_httpd(g_raop); raop_destroy(g_raop); g_raop = nullptr; }
     if (g_dnssd) { dnssd_destroy(g_dnssd); g_dnssd = nullptr; }
+    fireplay_video_shutdown();
     g_logger = nullptr;
+}
+
+JNIEXPORT void JNICALL
+Java_org_fireplay_MainActivity_nativeSetSurface(JNIEnv *env, jclass, jobject surface) {
+    if (surface) {
+        ANativeWindow *anw = ANativeWindow_fromSurface(env, surface);
+        fireplay_video_set_surface(anw);
+        if (anw) ANativeWindow_release(anw);  // renderer keeps its own ref
+    } else {
+        fireplay_video_set_surface(nullptr);
+    }
 }
 
 static jobject buildTxtMap(JNIEnv *env,

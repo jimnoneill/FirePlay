@@ -79,8 +79,15 @@ target_compile_definitions(airplay PRIVATE
 target_link_libraries(airplay PUBLIC llhttp playfair plist crypto_static)
 
 # JNI bridge → libfireplay.so (loaded by Java System.loadLibrary)
-add_library(fireplay SHARED fireplay_jni.cpp audio_renderer_aaudio.cpp)
+add_library(fireplay SHARED
+    fireplay_jni.cpp
+    audio_renderer_aaudio.cpp
+    video_renderer_mediacodec.cpp
+)
 target_include_directories(fireplay PRIVATE ${ALAC}/codec)
 find_library(log-lib log)
 find_library(aaudio-lib aaudio)
-target_link_libraries(fireplay airplay alac_dec ${log-lib} ${aaudio-lib})
+find_library(android-lib android)
+find_library(mediandk-lib mediandk)
+target_link_libraries(fireplay airplay alac_dec
+    ${log-lib} ${aaudio-lib} ${android-lib} ${mediandk-lib})

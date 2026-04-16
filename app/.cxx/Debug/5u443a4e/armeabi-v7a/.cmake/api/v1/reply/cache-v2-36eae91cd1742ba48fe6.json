@@ -1266,6 +1266,18 @@
 			"value" : "C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/28/libaaudio.so"
 		},
 		{
+			"name" : "android-lib",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/28/libandroid.so"
+		},
+		{
 			"name" : "fireplay_BINARY_DIR",
 			"properties" : 
 			[
@@ -1312,6 +1324,18 @@
 			],
 			"type" : "FILEPATH",
 			"value" : "C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/28/liblog.so"
+		},
+		{
+			"name" : "mediandk-lib",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/28/libmediandk.so"
 		}
 	],
 	"kind" : "cache",
