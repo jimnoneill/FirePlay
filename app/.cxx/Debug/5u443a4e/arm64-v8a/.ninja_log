@@ -79,3 +79,6 @@
 1438	1802	7979776002401554	C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so	ea4efbda508bf362
 7	11726	7980653755355308	CMakeFiles/fireplay.dir/fireplay_jni.cpp.o	424302794577db8b
 11727	12125	7980653759269599	C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so	ea4efbda508bf362
+15	935	7980661421234971	CMakeFiles/airplay.dir/dnssd_stub.c.o	acde5cc31c6deab4
+935	1335	7980661424757606	libairplay.a	6bbfdcdd2f60fd9
+1336	1594	7980661427582475	C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm64-v8a/libfireplay.so	ea4efbda508bf362

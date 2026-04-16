@@ -61,3 +61,6 @@
 1139	1435	7979776018630308	C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so	ccddb622201772b
 6	1343	7980653774719530	CMakeFiles/fireplay.dir/fireplay_jni.cpp.o	11eb1a86d04c01b4
 1344	1714	7980653778384825	C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so	ccddb622201772b
+6	288	7980661432715426	CMakeFiles/airplay.dir/dnssd_stub.c.o	2b0b0846343d6066
+289	551	7980661435173536	libairplay.a	6bbfdcdd2f60fd9
+551	787	7980661437447077	C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so	ccddb622201772b
