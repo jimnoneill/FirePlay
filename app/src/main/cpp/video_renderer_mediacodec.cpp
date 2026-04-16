@@ -22,6 +22,23 @@
 #define LOGW(...) __android_log_print(ANDROID_LOG_WARN,  TAG, __VA_ARGS__)
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__)
 
+#include <jni.h>
+extern JavaVM *g_jvm;
+extern jclass  g_main_class;  // cached global ref, set in JNI_OnLoad
+
+static void notify_main(const char *method) {
+    if (!g_jvm || !g_main_class) return;
+    JNIEnv *env = nullptr;
+    bool attached = false;
+    if (g_jvm->GetEnv((void **)&env, JNI_VERSION_1_6) != JNI_OK) {
+        if (g_jvm->AttachCurrentThread(&env, nullptr) != JNI_OK) return;
+        attached = true;
+    }
+    jmethodID m = env->GetStaticMethodID(g_main_class, method, "()V");
+    if (m) env->CallStaticVoidMethod(g_main_class, m);
+    if (attached) g_jvm->DetachCurrentThread();
+}
+
 namespace {
 
 std::mutex g_lock;
@@ -40,6 +57,7 @@ void drain_loop() {
         if (idx >= 0) {
             AMediaCodec_releaseOutputBuffer(g_codec, idx, true);
             rendered++;
+            if (rendered == 1) notify_main("onFirstFrame");
             if (rendered <= 3 || rendered % 60 == 0) {
                 LOGI("out#%d size=%d pts=%lld flags=%u",
                      rendered, info.size, (long long)info.presentationTimeUs, info.flags);
@@ -66,6 +84,7 @@ void teardown_codec_locked() {
         AMediaCodec_delete(g_codec);
         g_codec = nullptr;
         g_started = false;
+        notify_main("onMediaIdle");
     }
 }
 

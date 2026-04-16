@@ -22,6 +22,18 @@ extern "C" {
 #define LOGW(...) __android_log_print(ANDROID_LOG_WARN,  TAG, __VA_ARGS__)
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, TAG, __VA_ARGS__)
 
+JavaVM *g_jvm = nullptr;
+jclass  g_main_class = nullptr;
+extern "C" JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *) {
+    g_jvm = vm;
+    JNIEnv *env = nullptr;
+    if (vm->GetEnv((void **)&env, JNI_VERSION_1_6) == JNI_OK) {
+        jclass local = env->FindClass("org/fireplay/MainActivity");
+        if (local) g_main_class = (jclass)env->NewGlobalRef(local);
+    }
+    return JNI_VERSION_1_6;
+}
+
 namespace {
 
 raop_t   *g_raop = nullptr;
@@ -104,10 +116,19 @@ float cb_on_video_playlist_remove(void *)                                      {
 
 extern "C" {
 
+static char g_mac_str[32] = "00:15:5d:62:9a:dd";
+static char g_pi_str[64] = "00000000-0000-0000-0000-000000000000";
+
 JNIEXPORT jint JNICALL
-Java_org_fireplay_MainActivity_nativeStart(JNIEnv *env, jclass, jstring jname, jint airplayPort, jint raopPort) {
+Java_org_fireplay_MainActivity_nativeStart(JNIEnv *env, jclass, jstring jname, jint airplayPort, jint raopPort, jstring jmac, jstring jpi) {
     const char *name = env->GetStringUTFChars(jname, nullptr);
-    LOGI("nativeStart name=%s airplay=%d raop=%d", name, airplayPort, raopPort);
+    const char *mac  = env->GetStringUTFChars(jmac, nullptr);
+    const char *pi   = env->GetStringUTFChars(jpi, nullptr);
+    LOGI("nativeStart name=%s airplay=%d raop=%d mac=%s pi=%s", name, airplayPort, raopPort, mac, pi);
+    strncpy(g_mac_str, mac, sizeof(g_mac_str)-1);
+    strncpy(g_pi_str, pi, sizeof(g_pi_str)-1);
+    env->ReleaseStringUTFChars(jmac, mac);
+    env->ReleaseStringUTFChars(jpi, pi);
 
     if (g_raop) {
         LOGW("nativeStart called while already running");
@@ -167,7 +188,11 @@ Java_org_fireplay_MainActivity_nativeStart(JNIEnv *env, jclass, jstring jname, j
     LOGI("logger wired");
 
     /* Stable device ID derived from a fake MAC. iOS will key client trust on this. */
-    const char hw_addr[6] = {0x00, 0x15, 0x5D, 0x62, 0x9A, 0xDD};
+    /* Parse MAC from string "aa:bb:cc:dd:ee:ff" into 6 bytes. */
+    char hw_addr[6] = {};
+    { unsigned int m[6]; sscanf(g_mac_str, "%x:%x:%x:%x:%x:%x",
+        &m[0],&m[1],&m[2],&m[3],&m[4],&m[5]);
+      for (int i=0;i<6;i++) hw_addr[i]=(char)m[i]; }
     int err = 0;
     g_dnssd = dnssd_init(name, (int)strlen(name), hw_addr, sizeof(hw_addr), &err, 0);
     if (!g_dnssd || err) {
@@ -181,7 +206,7 @@ Java_org_fireplay_MainActivity_nativeStart(JNIEnv *env, jclass, jstring jname, j
     raop_set_dnssd(g_raop, g_dnssd);
 
     LOGI("calling raop_init2");
-    int r2 = raop_init2(g_raop, /*nohold=*/1, "00:15:5D:62:9A:DD", /*keyfile=*/"");
+    int r2 = raop_init2(g_raop, /*nohold=*/1, g_mac_str, /*keyfile=*/"");
     LOGI("raop_init2 rc=%d", r2);
 
     /* Enable HLS so iPhone's GET / probe is accepted. Also set video lang so
@@ -242,13 +267,13 @@ Java_org_fireplay_MainActivity_nativeGetTxtRecordsAirplay(JNIEnv *env, jclass) {
     static const std::pair<const char*, const char*> kRecords[] = {
         {"vv", "2"},
         {"srcvers", "220.68"},
-        {"pi", "2e388006-13ba-4041-9a67-25dd4a43d536"},
+        {"pi", g_pi_str},
         {"pk", "000bd18473cc2c0feb76ff3e5dda20184333f9a39cbfec7bcae7eb2d0bf2c0a6"},
         {"model", "AppleTV3,2"},
         {"flags", "0x4"},
         {"pw", "false"},
         {"features", "0x527FFEE6,0x0"},
-        {"deviceid", "00:15:5d:62:9a:dd"}
+        {"deviceid", g_mac_str}
     };
     return buildTxtMap(env, kRecords, sizeof(kRecords)/sizeof(kRecords[0]));
 }

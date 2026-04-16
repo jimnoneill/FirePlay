@@ -8,54 +8,76 @@ import android.util.Log
 import android.view.Surface
 import android.view.SurfaceHolder
 import android.view.SurfaceView
+import android.view.View
 import android.view.WindowManager
-import android.widget.FrameLayout
+import android.widget.LinearLayout
 
 class MainActivity : Activity(), SurfaceHolder.Callback {
+
+    private lateinit var surfaceView: SurfaceView
+    private lateinit var splash: LinearLayout
 
     companion object {
         private const val TAG = "FirePlay"
         init { System.loadLibrary("fireplay") }
 
-        @JvmStatic external fun nativeStart(name: String, airplayPort: Int, raopPort: Int): Int
+        @JvmStatic external fun nativeStart(name: String, airplayPort: Int, raopPort: Int, mac: String, pi: String): Int
         @JvmStatic external fun nativeStop()
         @JvmStatic external fun nativeSetSurface(surface: Surface?)
         @JvmStatic external fun nativeGetTxtRecordsAirplay(): Map<String, String>
         @JvmStatic external fun nativeGetTxtRecordsRaop(): Map<String, String>
+
+        // Renderer notifies us when first video frame renders so we hide splash.
+        @JvmStatic
+        fun onFirstFrame() {
+            instance?.runOnUiThread { instance?.showVideo() }
+        }
+        @JvmStatic
+        fun onMediaIdle() {
+            instance?.runOnUiThread { instance?.showSplash() }
+        }
+        var instance: MainActivity? = null
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-
-        val surfaceView = SurfaceView(this).apply { holder.addCallback(this@MainActivity) }
-        setContentView(FrameLayout(this).apply {
-            addView(surfaceView, FrameLayout.LayoutParams(
-                FrameLayout.LayoutParams.MATCH_PARENT,
-                FrameLayout.LayoutParams.MATCH_PARENT))
-        })
+        setContentView(R.layout.activity_main)
+        surfaceView = findViewById(R.id.surface)
+        splash = findViewById(R.id.splash)
+        surfaceView.holder.addCallback(this)
+        instance = this
 
         val intent = Intent(this, FirePlayService::class.java)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            startForegroundService(intent)
-        } else {
-            startService(intent)
-        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) startForegroundService(intent)
+        else startService(intent)
         Log.i(TAG, "MainActivity: FirePlayService requested")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (instance === this) instance = null
     }
 
     override fun surfaceCreated(holder: SurfaceHolder) {
         Log.i(TAG, "surfaceCreated")
         nativeSetSurface(holder.surface)
     }
-
     override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
         Log.i(TAG, "surfaceChanged ${width}x${height}")
         nativeSetSurface(holder.surface)
     }
-
     override fun surfaceDestroyed(holder: SurfaceHolder) {
         Log.i(TAG, "surfaceDestroyed")
         nativeSetSurface(null)
+    }
+
+    fun showVideo() {
+        surfaceView.visibility = View.VISIBLE
+        splash.visibility = View.INVISIBLE
+    }
+    fun showSplash() {
+        surfaceView.visibility = View.INVISIBLE
+        splash.visibility = View.VISIBLE
     }
 }

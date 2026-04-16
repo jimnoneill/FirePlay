@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:keepScreenOn="true">
+
+    <!-- SurfaceView always present and visible; MediaCodec renders to it. -->
+    <SurfaceView
+        android:id="@+id/surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Splash overlay sits on top; we hide it when first video frame renders. -->
+    <LinearLayout
+        android:id="@+id/splash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@android:color/black">
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="FirePlay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="FirePlay"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp"
+            android:fontFamily="sans-serif-light" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Ready to receive AirPlay from your iPhone"
+            android:textColor="#B0B0B0"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="On your iPhone: Music or Photos → AirPlay → FirePlay"
+            android:textColor="#707070"
+            android:textSize="14sp" />
+    </LinearLayout>
+</FrameLayout>

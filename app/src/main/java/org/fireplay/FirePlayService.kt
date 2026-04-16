@@ -26,7 +26,9 @@ class FirePlayService : Service() {
         private const val CHANNEL_ID = "fireplay-svc"
         private const val NOTIF_ID = 1
         const val AIRPLAY_PORT = 7000
-        const val RAOP_PORT = 7000  // UxPlay's httpd handles both protocols on one port
+        const val RAOP_PORT = 7000
+        var deviceMac = "00:15:5d:62:9a:dd"
+        var devicePi = "00000000-0000-0000-0000-000000000000"
     }
 
     override fun onBind(intent: Intent?): IBinder? = null
@@ -41,10 +43,36 @@ class FirePlayService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (!started) {
             started = true
+            generateDeviceId()
             Thread { startJmdns() }.start()
-            MainActivity.nativeStart("FirePlay", AIRPLAY_PORT, RAOP_PORT)
+            MainActivity.nativeStart("FirePlay", AIRPLAY_PORT, RAOP_PORT, deviceMac, devicePi)
         }
         return START_STICKY
+    }
+
+    private fun generateDeviceId() {
+        val prefs = getSharedPreferences("fireplay", MODE_PRIVATE)
+        if (!prefs.contains("pi")) {
+            prefs.edit()
+                .putString("pi", java.util.UUID.randomUUID().toString())
+                .apply()
+        }
+        devicePi = prefs.getString("pi", "")!!
+        deviceMac = getWifiMac()
+        Log.i(TAG, "service: deviceMac=$deviceMac pi=$devicePi")
+    }
+
+    private fun getWifiMac(): String {
+        try {
+            val interfaces = java.net.NetworkInterface.getNetworkInterfaces()
+            while (interfaces.hasMoreElements()) {
+                val nic = interfaces.nextElement()
+                if (nic.name != "wlan0") continue
+                val mac = nic.hardwareAddress ?: continue
+                return mac.joinToString(":") { "%02x".format(it) }
+            }
+        } catch (_: Exception) {}
+        return "00:15:5d:62:9a:dd"
     }
 
     override fun onDestroy() {
