@@ -60,8 +60,15 @@ void cb_audio_process(void *, raop_ntp_t *, audio_decode_struct *data) {
         fireplay_audio_push_aac_eld(data->data, data->data_len);
     }
 }
-void cb_conn_init_renderer(void *)    { fireplay_audio_init();     LOGI("conn_init"); }
-void cb_conn_destroy_renderer(void *) { fireplay_audio_shutdown(); LOGI("conn_destroy"); }
+void cb_conn_init_renderer(void *) {
+    fireplay_audio_init();
+    LOGI("conn_init: audio+video ready");
+}
+void cb_conn_destroy_renderer(void *) {
+    fireplay_audio_shutdown();
+    fireplay_video_shutdown();
+    LOGI("conn_destroy: audio+video torn down");
+}
 void cb_video_process(void *, raop_ntp_t *, video_decode_struct *data) {
     if (!data || data->data_len <= 0) return;
     fireplay_video_push_nal(data->data, data->data_len, data->ntp_time_local);
@@ -188,11 +195,18 @@ Java_org_fireplay_MainActivity_nativeStart(JNIEnv *env, jclass, jstring jname, j
     LOGI("logger wired");
 
     /* Stable device ID derived from a fake MAC. iOS will key client trust on this. */
-    /* Parse MAC from string "aa:bb:cc:dd:ee:ff" into 6 bytes. */
+    /* Parse MAC from string "aa:bb:cc:dd:ee:ff" into 6 bytes.
+       On Android 9, wlan0 MAC may be randomized. Use our advertised MAC
+       so iPhone's key derivation matches. */
     char hw_addr[6] = {};
-    { unsigned int m[6]; sscanf(g_mac_str, "%x:%x:%x:%x:%x:%x",
-        &m[0],&m[1],&m[2],&m[3],&m[4],&m[5]);
-      for (int i=0;i<6;i++) hw_addr[i]=(char)m[i]; }
+    { unsigned int m[6];
+      const char *mac = g_mac_str;
+      if (sscanf(mac, "%x:%x:%x:%x:%x:%x", &m[0],&m[1],&m[2],&m[3],&m[4],&m[5]) == 6)
+          for (int i=0;i<6;i++) hw_addr[i]=(char)m[i];
+      LOGI("hw_addr=%02x:%02x:%02x:%02x:%02x:%02x",
+           (uint8_t)hw_addr[0],(uint8_t)hw_addr[1],(uint8_t)hw_addr[2],
+           (uint8_t)hw_addr[3],(uint8_t)hw_addr[4],(uint8_t)hw_addr[5]);
+    }
     int err = 0;
     g_dnssd = dnssd_init(name, (int)strlen(name), hw_addr, sizeof(hw_addr), &err, 0);
     if (!g_dnssd || err) {
@@ -264,11 +278,17 @@ static jobject buildTxtMap(JNIEnv *env,
 
 JNIEXPORT jobject JNICALL
 Java_org_fireplay_MainActivity_nativeGetTxtRecordsAirplay(JNIEnv *env, jclass) {
-    static const std::pair<const char*, const char*> kRecords[] = {
+    /* pk must match the Ed25519 key raop_init2 generated — read from dnssd
+       which was updated by dnssd_set_pk(). Falls back to static if not set. */
+    int pk_len = 0;
+    const char *dnssd_pk = g_dnssd ? dnssd_get_pk(g_dnssd, &pk_len) : nullptr;
+    static const char *fallback_pk = "000bd18473cc2c0feb76ff3e5dda20184333f9a39cbfec7bcae7eb2d0bf2c0a6";
+    const char *pk = (dnssd_pk && pk_len > 0) ? dnssd_pk : fallback_pk;
+    const std::pair<const char*, const char*> kRecords[] = {
         {"vv", "2"},
         {"srcvers", "220.68"},
         {"pi", g_pi_str},
-        {"pk", "000bd18473cc2c0feb76ff3e5dda20184333f9a39cbfec7bcae7eb2d0bf2c0a6"},
+        {"pk", pk},
         {"model", "AppleTV3,2"},
         {"flags", "0x4"},
         {"pw", "false"},
@@ -280,9 +300,13 @@ Java_org_fireplay_MainActivity_nativeGetTxtRecordsAirplay(JNIEnv *env, jclass) {
 
 JNIEXPORT jobject JNICALL
 Java_org_fireplay_MainActivity_nativeGetTxtRecordsRaop(JNIEnv *env, jclass) {
-    static const std::pair<const char*, const char*> kRecords[] = {
+    int rpk_len = 0;
+    const char *rpk = g_dnssd ? dnssd_get_pk(g_dnssd, &rpk_len) : nullptr;
+    static const char *fpk = "000bd18473cc2c0feb76ff3e5dda20184333f9a39cbfec7bcae7eb2d0bf2c0a6";
+    const char *raop_pk = (rpk && rpk_len > 0) ? rpk : fpk;
+    const std::pair<const char*, const char*> kRecords[] = {
         {"vs", "220.68"}, {"vn", "65537"}, {"tp", "UDP"}, {"sf", "0x4"},
-        {"pk", "000bd18473cc2c0feb76ff3e5dda20184333f9a39cbfec7bcae7eb2d0bf2c0a6"},
+        {"pk", raop_pk},
         {"md", "0,1,2"}, {"et", "0,3,5"}, {"da", "true"},
         {"cn", "0,1,2,3"}, {"ch", "2"}, {"ss", "16"}, {"sr", "44100"},
         {"txtvers", "1"}, {"ft", "0x527FFEE6,0x0"}, {"am", "AppleTV3,2"}

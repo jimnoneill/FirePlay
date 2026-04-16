@@ -138,6 +138,7 @@ void dnssd_set_pk(dnssd_t *d, char *pk_str)                    {
     d->pk = pk_str ? strdup(pk_str) : NULL;
     rebuild_txt_records(d);
 }
+const char *dnssd_get_pk(dnssd_t *d, int *length)               { if (length) *length = d->pk ? (int)strlen(d->pk) : 0; return d->pk; }
 void dnssd_destroy(dnssd_t *d)                                 {
     if (!d) return;
     free(d->pk);
