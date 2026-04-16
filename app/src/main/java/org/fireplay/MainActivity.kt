@@ -36,6 +36,17 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         fun onMediaIdle() {
             instance?.runOnUiThread { instance?.showSplash() }
         }
+        @JvmStatic
+        fun onConnectionStart() {
+            // Bring Activity to foreground when iPhone connects, so Surface exists.
+            val ctx = appContext ?: instance ?: return
+            val intent = Intent(ctx, MainActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                        Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+            }
+            ctx.startActivity(intent)
+        }
+        var appContext: android.content.Context? = null
         var instance: MainActivity? = null
     }
 
@@ -47,6 +58,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         splash = findViewById(R.id.splash)
         surfaceView.holder.addCallback(this)
         instance = this
+        appContext = applicationContext
 
         val intent = Intent(this, FirePlayService::class.java)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) startForegroundService(intent)

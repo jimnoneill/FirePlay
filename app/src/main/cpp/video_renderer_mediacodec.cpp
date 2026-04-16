@@ -26,7 +26,7 @@
 extern JavaVM *g_jvm;
 extern jclass  g_main_class;  // cached global ref, set in JNI_OnLoad
 
-static void notify_main(const char *method) {
+void notify_main(const char *method) {
     if (!g_jvm || !g_main_class) return;
     JNIEnv *env = nullptr;
     bool attached = false;

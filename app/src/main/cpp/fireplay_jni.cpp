@@ -17,6 +17,8 @@ extern "C" {
 #include "video_renderer_mediacodec.h"
 #include <android/native_window_jni.h>
 
+extern void notify_main(const char *method);
+
 #define TAG "FirePlay-jni"
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO,  TAG, __VA_ARGS__)
 #define LOGW(...) __android_log_print(ANDROID_LOG_WARN,  TAG, __VA_ARGS__)
@@ -62,6 +64,7 @@ void cb_audio_process(void *, raop_ntp_t *, audio_decode_struct *data) {
 }
 void cb_conn_init_renderer(void *) {
     fireplay_audio_init();
+    notify_main("onConnectionStart");
     LOGI("conn_init: audio+video ready");
 }
 void cb_conn_destroy_renderer(void *) {
