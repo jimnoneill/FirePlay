@@ -25,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 9,
+				"line" : 69,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 14,
+				"line" : 71,
 				"parent" : 0
 			}
 		]
@@ -49,6 +49,37 @@
 			[
 				{
 					"define" : "fireplay_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "C:/fireplay/app/src/main/cpp/../../../../lib-uxplay"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include"
 				}
 			],
 			"language" : "CXX",
@@ -70,6 +101,25 @@
 			}
 		}
 	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "plist::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "llhttp::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "playfair::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "airplay::@6890427a1f51a3e7e1df"
+		}
+	],
 	"id" : "fireplay::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
@@ -81,7 +131,28 @@
 			},
 			{
 				"backtrace" : 2,
+				"fragment" : "libairplay.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
 				"fragment" : "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\sysroot\\usr\\lib\\arm-linux-androideabi\\28\\liblog.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "libllhttp.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "libplayfair.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "libplist.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "C:\\fireplay\\app\\src\\main\\cpp\\..\\..\\..\\..\\third_party\\android_openssl\\ssl_3\\armeabi-v7a\\libcrypto.a",
 				"role" : "libraries"
 			},
 			{

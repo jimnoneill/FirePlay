@@ -41,22 +41,465 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a/
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target plist
+
+
+#############################################
+# Order-only phony target for plist
+
+build cmake_object_order_depends_target_plist: phony || CMakeFiles/plist.dir
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/base64.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/base64.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\base64.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/bplist.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/bplist.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\bplist.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/bytearray.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/bytearray.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\bytearray.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/hashtable.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/hashtable.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\hashtable.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/jplist.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/jplist.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\jplist.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/jsmn.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/jsmn.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\jsmn.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/oplist.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/oplist.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\oplist.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/out-default.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/out-default.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\out-default.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/out-limd.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/out-limd.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\out-limd.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/out-plutil.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/out-plutil.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\out-plutil.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/plist.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/plist.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\plist.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/ptrarray.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/ptrarray.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\ptrarray.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/time64.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/time64.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\time64.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/xplist.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/src/xplist.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src\xplist.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\src
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/libcnary/node.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/libcnary/node.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\libcnary\node.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\libcnary
+
+build CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/libcnary/node_list.c.o: C_COMPILER__plist_Debug C$:/fireplay/third_party/libplist/libcnary/node_list.c || cmake_object_order_depends_target_plist
+  DEFINES = -DHAVE_CONFIG_H=1 -D_GNU_SOURCE
+  DEP_FILE = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\libcnary\node_list.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist
+  OBJECT_DIR = CMakeFiles\plist.dir
+  OBJECT_FILE_DIR = CMakeFiles\plist.dir\C_\fireplay\third_party\libplist\libcnary
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target plist
+
+
+#############################################
+# Link the static library libplist.a
+
+build libplist.a: C_STATIC_LIBRARY_LINKER__plist_Debug CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/base64.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/bplist.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/bytearray.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/hashtable.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/jplist.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/jsmn.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/oplist.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/out-default.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/out-limd.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/out-plutil.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/plist.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/ptrarray.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/time64.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/src/xplist.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/libcnary/node.c.o CMakeFiles/plist.dir/C_/fireplay/third_party/libplist/libcnary/node_list.c.o
+  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info
+  OBJECT_DIR = CMakeFiles\plist.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = libplist.a
+  TARGET_PDB = plist.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target llhttp
+
+
+#############################################
+# Order-only phony target for llhttp
+
+build cmake_object_order_depends_target_llhttp: phony || CMakeFiles/llhttp.dir
+
+build CMakeFiles/llhttp.dir/C_/fireplay/lib-uxplay/llhttp/api.c.o: C_COMPILER__llhttp_Debug C$:/fireplay/lib-uxplay/llhttp/api.c || cmake_object_order_depends_target_llhttp
+  DEP_FILE = CMakeFiles\llhttp.dir\C_\fireplay\lib-uxplay\llhttp\api.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp
+  OBJECT_DIR = CMakeFiles\llhttp.dir
+  OBJECT_FILE_DIR = CMakeFiles\llhttp.dir\C_\fireplay\lib-uxplay\llhttp
+
+build CMakeFiles/llhttp.dir/C_/fireplay/lib-uxplay/llhttp/http.c.o: C_COMPILER__llhttp_Debug C$:/fireplay/lib-uxplay/llhttp/http.c || cmake_object_order_depends_target_llhttp
+  DEP_FILE = CMakeFiles\llhttp.dir\C_\fireplay\lib-uxplay\llhttp\http.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp
+  OBJECT_DIR = CMakeFiles\llhttp.dir
+  OBJECT_FILE_DIR = CMakeFiles\llhttp.dir\C_\fireplay\lib-uxplay\llhttp
+
+build CMakeFiles/llhttp.dir/C_/fireplay/lib-uxplay/llhttp/llhttp.c.o: C_COMPILER__llhttp_Debug C$:/fireplay/lib-uxplay/llhttp/llhttp.c || cmake_object_order_depends_target_llhttp
+  DEP_FILE = CMakeFiles\llhttp.dir\C_\fireplay\lib-uxplay\llhttp\llhttp.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp
+  OBJECT_DIR = CMakeFiles\llhttp.dir
+  OBJECT_FILE_DIR = CMakeFiles\llhttp.dir\C_\fireplay\lib-uxplay\llhttp
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target llhttp
+
+
+#############################################
+# Link the static library libllhttp.a
+
+build libllhttp.a: C_STATIC_LIBRARY_LINKER__llhttp_Debug CMakeFiles/llhttp.dir/C_/fireplay/lib-uxplay/llhttp/api.c.o CMakeFiles/llhttp.dir/C_/fireplay/lib-uxplay/llhttp/http.c.o CMakeFiles/llhttp.dir/C_/fireplay/lib-uxplay/llhttp/llhttp.c.o
+  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info
+  OBJECT_DIR = CMakeFiles\llhttp.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = libllhttp.a
+  TARGET_PDB = llhttp.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target playfair
+
+
+#############################################
+# Order-only phony target for playfair
+
+build cmake_object_order_depends_target_playfair: phony || CMakeFiles/playfair.dir
+
+build CMakeFiles/playfair.dir/C_/fireplay/lib-uxplay/playfair/hand_garble.c.o: C_COMPILER__playfair_Debug C$:/fireplay/lib-uxplay/playfair/hand_garble.c || cmake_object_order_depends_target_playfair
+  DEP_FILE = CMakeFiles\playfair.dir\C_\fireplay\lib-uxplay\playfair\hand_garble.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include
+  OBJECT_DIR = CMakeFiles\playfair.dir
+  OBJECT_FILE_DIR = CMakeFiles\playfair.dir\C_\fireplay\lib-uxplay\playfair
+
+build CMakeFiles/playfair.dir/C_/fireplay/lib-uxplay/playfair/modified_md5.c.o: C_COMPILER__playfair_Debug C$:/fireplay/lib-uxplay/playfair/modified_md5.c || cmake_object_order_depends_target_playfair
+  DEP_FILE = CMakeFiles\playfair.dir\C_\fireplay\lib-uxplay\playfair\modified_md5.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include
+  OBJECT_DIR = CMakeFiles\playfair.dir
+  OBJECT_FILE_DIR = CMakeFiles\playfair.dir\C_\fireplay\lib-uxplay\playfair
+
+build CMakeFiles/playfair.dir/C_/fireplay/lib-uxplay/playfair/omg_hax.c.o: C_COMPILER__playfair_Debug C$:/fireplay/lib-uxplay/playfair/omg_hax.c || cmake_object_order_depends_target_playfair
+  DEP_FILE = CMakeFiles\playfair.dir\C_\fireplay\lib-uxplay\playfair\omg_hax.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include
+  OBJECT_DIR = CMakeFiles\playfair.dir
+  OBJECT_FILE_DIR = CMakeFiles\playfair.dir\C_\fireplay\lib-uxplay\playfair
+
+build CMakeFiles/playfair.dir/C_/fireplay/lib-uxplay/playfair/playfair.c.o: C_COMPILER__playfair_Debug C$:/fireplay/lib-uxplay/playfair/playfair.c || cmake_object_order_depends_target_playfair
+  DEP_FILE = CMakeFiles\playfair.dir\C_\fireplay\lib-uxplay\playfair\playfair.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include
+  OBJECT_DIR = CMakeFiles\playfair.dir
+  OBJECT_FILE_DIR = CMakeFiles\playfair.dir\C_\fireplay\lib-uxplay\playfair
+
+build CMakeFiles/playfair.dir/C_/fireplay/lib-uxplay/playfair/sap_hash.c.o: C_COMPILER__playfair_Debug C$:/fireplay/lib-uxplay/playfair/sap_hash.c || cmake_object_order_depends_target_playfair
+  DEP_FILE = CMakeFiles\playfair.dir\C_\fireplay\lib-uxplay\playfair\sap_hash.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include
+  OBJECT_DIR = CMakeFiles\playfair.dir
+  OBJECT_FILE_DIR = CMakeFiles\playfair.dir\C_\fireplay\lib-uxplay\playfair
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target playfair
+
+
+#############################################
+# Link the static library libplayfair.a
+
+build libplayfair.a: C_STATIC_LIBRARY_LINKER__playfair_Debug CMakeFiles/playfair.dir/C_/fireplay/lib-uxplay/playfair/hand_garble.c.o CMakeFiles/playfair.dir/C_/fireplay/lib-uxplay/playfair/modified_md5.c.o CMakeFiles/playfair.dir/C_/fireplay/lib-uxplay/playfair/omg_hax.c.o CMakeFiles/playfair.dir/C_/fireplay/lib-uxplay/playfair/playfair.c.o CMakeFiles/playfair.dir/C_/fireplay/lib-uxplay/playfair/sap_hash.c.o
+  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info
+  OBJECT_DIR = CMakeFiles\playfair.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = libplayfair.a
+  TARGET_PDB = playfair.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target airplay
+
+
+#############################################
+# Order-only phony target for airplay
+
+build cmake_object_order_depends_target_airplay: phony || cmake_object_order_depends_target_llhttp cmake_object_order_depends_target_playfair cmake_object_order_depends_target_plist
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/airplay_video.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/airplay_video.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\airplay_video.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/byteutils.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/byteutils.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\byteutils.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/compat.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/compat.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\compat.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/crypto.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/crypto.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\crypto.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/http_request.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/http_request.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\http_request.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/http_response.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/http_response.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\http_response.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/httpd.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/httpd.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\httpd.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/logger.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/logger.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\logger.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/mirror_buffer.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/mirror_buffer.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\mirror_buffer.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/netutils.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/netutils.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\netutils.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/pairing.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/pairing.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\pairing.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/raop.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/raop.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\raop.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/raop_buffer.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/raop_buffer.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\raop_buffer.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/raop_ntp.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/raop_ntp.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\raop_ntp.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/raop_rtp.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/raop_rtp.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\raop_rtp.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/raop_rtp_mirror.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/raop_rtp_mirror.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\raop_rtp_mirror.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/srp.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/srp.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\srp.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/utils.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/utils.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\utils.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/fairplay_playfair.c.o: C_COMPILER__airplay_Debug C$:/fireplay/lib-uxplay/fairplay_playfair.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay\fairplay_playfair.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir\C_\fireplay\lib-uxplay
+
+build CMakeFiles/airplay.dir/dnssd_stub.c.o: C_COMPILER__airplay_Debug C$:/fireplay/app/src/main/cpp/dnssd_stub.c || cmake_object_order_depends_target_airplay
+  DEFINES = -DNOHOLD -DOPENSSL_API_COMPAT=0x10101000L -DPLIST_210 -DPLIST_230 -DSTANDALONE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_REENTRANT -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+  DEP_FILE = CMakeFiles\airplay.dir\dnssd_stub.c.o.d
+  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info  -fPIC -std=gnu11
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  OBJECT_FILE_DIR = CMakeFiles\airplay.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target airplay
+
+
+#############################################
+# Link the static library libairplay.a
+
+build libairplay.a: C_STATIC_LIBRARY_LINKER__airplay_Debug CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/airplay_video.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/byteutils.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/compat.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/crypto.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/http_request.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/http_response.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/httpd.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/logger.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/mirror_buffer.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/netutils.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/pairing.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/raop.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/raop_buffer.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/raop_ntp.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/raop_rtp.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/raop_rtp_mirror.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/srp.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/utils.c.o CMakeFiles/airplay.dir/C_/fireplay/lib-uxplay/fairplay_playfair.c.o CMakeFiles/airplay.dir/dnssd_stub.c.o || libllhttp.a libplayfair.a libplist.a
+  LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security -Wall -O2 -fno-limit-debug-info
+  OBJECT_DIR = CMakeFiles\airplay.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = libairplay.a
+  TARGET_PDB = airplay.a.dbg
+
+# =============================================================================
 # Object build statements for SHARED_LIBRARY target fireplay
 
 
 #############################################
 # Order-only phony target for fireplay
 
-build cmake_object_order_depends_target_fireplay: phony || CMakeFiles/fireplay.dir
+build cmake_object_order_depends_target_fireplay: phony || cmake_object_order_depends_target_airplay cmake_object_order_depends_target_llhttp cmake_object_order_depends_target_playfair cmake_object_order_depends_target_plist
 
 build CMakeFiles/fireplay.dir/fireplay_jni.cpp.o: CXX_COMPILER__fireplay_Debug C$:/fireplay/app/src/main/cpp/fireplay_jni.cpp || cmake_object_order_depends_target_fireplay
   DEFINES = -Dfireplay_EXPORTS
   DEP_FILE = CMakeFiles\fireplay.dir\fireplay_jni.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info  -fPIC
+  INCLUDES = -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/llhttp -IC:/fireplay/app/src/main/cpp/../../../../lib-uxplay/playfair -IC:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/include -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/src -IC:/fireplay/app/src/main/cpp/../../../../third_party/libplist/libcnary/include
   OBJECT_DIR = CMakeFiles\fireplay.dir
   OBJECT_FILE_DIR = CMakeFiles\fireplay.dir
-  TARGET_COMPILE_PDB = CMakeFiles\fireplay.dir\
-  TARGET_PDB = C:\fireplay\app\build\intermediates\cxx\Debug\5u443a4e\obj\armeabi-v7a\libfireplay.pdb
 
 
 # =============================================================================
@@ -66,18 +509,17 @@ build CMakeFiles/fireplay.dir/fireplay_jni.cpp.o: CXX_COMPILER__fireplay_Debug C
 #############################################
 # Link the shared library C:\fireplay\app\build\intermediates\cxx\Debug\5u443a4e\obj\armeabi-v7a\libfireplay.so
 
-build C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so: CXX_SHARED_LIBRARY_LINKER__fireplay_Debug CMakeFiles/fireplay.dir/fireplay_jni.cpp.o | C$:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/28/liblog.so
+build C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so: CXX_SHARED_LIBRARY_LINKER__fireplay_Debug CMakeFiles/fireplay.dir/fireplay_jni.cpp.o | libairplay.a C$:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/28/liblog.so libllhttp.a libplayfair.a libplist.a C$:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/armeabi-v7a/libcrypto.a || libairplay.a libllhttp.a libplayfair.a libplist.a
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -std=c++17 -fno-limit-debug-info
   LINK_FLAGS = -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments
-  LINK_LIBRARIES = C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/28/liblog.so  -latomic -lm
+  LINK_LIBRARIES = libairplay.a  C:/android/android-ndk-r27d/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/arm-linux-androideabi/28/liblog.so  libllhttp.a  libplayfair.a  libplist.a  C:/fireplay/app/src/main/cpp/../../../../third_party/android_openssl/ssl_3/armeabi-v7a/libcrypto.a  -latomic -lm
   OBJECT_DIR = CMakeFiles\fireplay.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   SONAME = libfireplay.so
   SONAME_FLAG = -Wl,-soname,
-  TARGET_COMPILE_PDB = CMakeFiles\fireplay.dir\
   TARGET_FILE = C:\fireplay\app\build\intermediates\cxx\Debug\5u443a4e\obj\armeabi-v7a\libfireplay.so
-  TARGET_PDB = C:\fireplay\app\build\intermediates\cxx\Debug\5u443a4e\obj\armeabi-v7a\libfireplay.pdb
+  TARGET_PDB = fireplay.so.dbg
 
 
 #############################################
@@ -105,9 +547,17 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build airplay: phony libairplay.a
+
 build fireplay: phony C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so
 
 build libfireplay.so: phony C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so
+
+build llhttp: phony libllhttp.a
+
+build playfair: phony libplayfair.a
+
+build plist: phony libplist.a
 
 # =============================================================================
 # Folder targets.
@@ -117,7 +567,7 @@ build libfireplay.so: phony C$:/fireplay/app/build/intermediates/cxx/Debug/5u443
 #############################################
 # Folder: C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a
 
-build all: phony C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so
+build all: phony libplist.a libllhttp.a libplayfair.a libairplay.a C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so
 
 # =============================================================================
 # Built-in targets
@@ -126,14 +576,14 @@ build all: phony C$:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/arm
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/android/android-ndk-r27d/build/cmake/abis.cmake C$:/android/android-ndk-r27d/build/cmake/android-legacy.toolchain.cmake C$:/android/android-ndk-r27d/build/cmake/android.toolchain.cmake C$:/android/android-ndk-r27d/build/cmake/flags.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android-Clang.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android-Determine.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android-Initialize.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Determine-Compiler.cmake C$:/android/android-ndk-r27d/build/cmake/platforms.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCCompiler.cmake.in C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCCompilerABI.c C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXCompiler.cmake.in C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCompilerABI.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeGenericSystem.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeParseLibraryArchitecture.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystem.cmake.in C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-C.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-FindBinUtils.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GNU.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/TI-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-C.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-CXX.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Determine-C.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Determine-CXX.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Determine.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Initialize.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android/Determine-Compiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Linux.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/UnixPaths.cmake C$:/fireplay/app/src/main/cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1-g37088a8-dirty/CMakeCCompiler.cmake CMakeFiles/3.22.1-g37088a8-dirty/CMakeCXXCompiler.cmake CMakeFiles/3.22.1-g37088a8-dirty/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/android/android-ndk-r27d/build/cmake/abis.cmake C$:/android/android-ndk-r27d/build/cmake/android-legacy.toolchain.cmake C$:/android/android-ndk-r27d/build/cmake/android.toolchain.cmake C$:/android/android-ndk-r27d/build/cmake/flags.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android-Clang.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android-Initialize.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android.cmake C$:/android/android-ndk-r27d/build/cmake/platforms.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeGenericSystem.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-C.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GNU.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-C.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-CXX.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Initialize.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Linux.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/UnixPaths.cmake C$:/fireplay/app/src/main/cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1-g37088a8-dirty/CMakeCCompiler.cmake CMakeFiles/3.22.1-g37088a8-dirty/CMakeCXXCompiler.cmake CMakeFiles/3.22.1-g37088a8-dirty/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/android/android-ndk-r27d/build/cmake/abis.cmake C$:/android/android-ndk-r27d/build/cmake/android-legacy.toolchain.cmake C$:/android/android-ndk-r27d/build/cmake/android.toolchain.cmake C$:/android/android-ndk-r27d/build/cmake/flags.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android-Clang.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android-Determine.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android-Initialize.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Determine-Compiler.cmake C$:/android/android-ndk-r27d/build/cmake/platforms.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCCompiler.cmake.in C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCCompilerABI.c C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXCompiler.cmake.in C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCompilerABI.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeGenericSystem.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeParseLibraryArchitecture.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystem.cmake.in C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeTestCCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-C.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-FindBinUtils.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GNU.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/TI-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-C.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-CXX.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Determine-C.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Determine-CXX.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Determine.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Initialize.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android/Determine-Compiler.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Linux.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/UnixPaths.cmake C$:/fireplay/app/src/main/cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1-g37088a8-dirty/CMakeCCompiler.cmake CMakeFiles/3.22.1-g37088a8-dirty/CMakeCXXCompiler.cmake CMakeFiles/3.22.1-g37088a8-dirty/CMakeSystem.cmake: phony
+build C$:/android/android-ndk-r27d/build/cmake/abis.cmake C$:/android/android-ndk-r27d/build/cmake/android-legacy.toolchain.cmake C$:/android/android-ndk-r27d/build/cmake/android.toolchain.cmake C$:/android/android-ndk-r27d/build/cmake/flags.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android-Clang.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android-Initialize.cmake C$:/android/android-ndk-r27d/build/cmake/hooks/pre/Android.cmake C$:/android/android-ndk-r27d/build/cmake/platforms.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeGenericSystem.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-C.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/Clang.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Compiler/GNU.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-C.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang-CXX.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Clang.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android-Initialize.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Android.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/Linux.cmake C$:/android/sdk/cmake/3.22.1/share/cmake-3.22/Modules/Platform/UnixPaths.cmake C$:/fireplay/app/src/main/cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.22.1-g37088a8-dirty/CMakeCCompiler.cmake CMakeFiles/3.22.1-g37088a8-dirty/CMakeCXXCompiler.cmake CMakeFiles/3.22.1-g37088a8-dirty/CMakeSystem.cmake: phony
 
 
 #############################################

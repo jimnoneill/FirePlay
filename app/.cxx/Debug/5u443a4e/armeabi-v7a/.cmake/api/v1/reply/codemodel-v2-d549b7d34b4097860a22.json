@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "fireplay",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "airplay::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-airplay-Debug-87089ca23a9ba34e0d22.json",
+					"name" : "airplay",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fireplay::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fireplay-Debug-c44ce201a4b941a57942.json",
+					"name" : "fireplay",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "llhttp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-llhttp-Debug-75dfeb164e0b3ea9ff1e.json",
+					"name" : "llhttp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "playfair::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-playfair-Debug-3d34c5e5a7f6d052dd60.json",
+					"name" : "playfair",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "plist::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-plist-Debug-ae926c1ce1d5e1abcf1d.json",
+					"name" : "plist",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/fireplay/app/.cxx/Debug/5u443a4e/armeabi-v7a",
+		"source" : "C:/fireplay/app/src/main/cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

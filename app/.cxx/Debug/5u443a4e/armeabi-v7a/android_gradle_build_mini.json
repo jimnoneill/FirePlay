@@ -17,10 +17,34 @@
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
+    "airplay::@6890427a1f51a3e7e1df": {
+      "artifactName": "airplay",
+      "abi": "armeabi-v7a",
+      "output": "C:\\fireplay\\app\\.cxx\\Debug\\5u443a4e\\armeabi-v7a\\libairplay.a",
+      "runtimeFiles": []
+    },
+    "llhttp::@6890427a1f51a3e7e1df": {
+      "artifactName": "llhttp",
+      "abi": "armeabi-v7a",
+      "output": "C:\\fireplay\\app\\.cxx\\Debug\\5u443a4e\\armeabi-v7a\\libllhttp.a",
+      "runtimeFiles": []
+    },
     "fireplay::@6890427a1f51a3e7e1df": {
       "artifactName": "fireplay",
       "abi": "armeabi-v7a",
       "output": "C:\\fireplay\\app\\build\\intermediates\\cxx\\Debug\\5u443a4e\\obj\\armeabi-v7a\\libfireplay.so",
+      "runtimeFiles": []
+    },
+    "playfair::@6890427a1f51a3e7e1df": {
+      "artifactName": "playfair",
+      "abi": "armeabi-v7a",
+      "output": "C:\\fireplay\\app\\.cxx\\Debug\\5u443a4e\\armeabi-v7a\\libplayfair.a",
+      "runtimeFiles": []
+    },
+    "plist::@6890427a1f51a3e7e1df": {
+      "artifactName": "plist",
+      "abi": "armeabi-v7a",
+      "output": "C:\\fireplay\\app\\.cxx\\Debug\\5u443a4e\\armeabi-v7a\\libplist.a",
       "runtimeFiles": []
     }
   }

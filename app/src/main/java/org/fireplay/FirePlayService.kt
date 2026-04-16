@@ -26,7 +26,7 @@ class FirePlayService : Service() {
         private const val CHANNEL_ID = "fireplay-svc"
         private const val NOTIF_ID = 1
         const val AIRPLAY_PORT = 7000
-        const val RAOP_PORT = 7001
+        const val RAOP_PORT = 7000  // UxPlay's httpd handles both protocols on one port
     }
 
     override fun onBind(intent: Intent?): IBinder? = null

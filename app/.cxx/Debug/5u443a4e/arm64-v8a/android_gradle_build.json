@@ -17,12 +17,36 @@
     "{LIST_OF_TARGETS_TO_BUILD}"
   ],
   "libraries": {
+    "airplay::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "airplay",
+      "output": "C:\\fireplay\\app\\.cxx\\Debug\\5u443a4e\\arm64-v8a\\libairplay.a"
+    },
     "fireplay::@6890427a1f51a3e7e1df": {
       "toolchain": "toolchain",
       "abi": "arm64-v8a",
       "artifactName": "fireplay",
       "output": "C:\\fireplay\\app\\build\\intermediates\\cxx\\Debug\\5u443a4e\\obj\\arm64-v8a\\libfireplay.so",
       "runtimeFiles": []
+    },
+    "llhttp::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "llhttp",
+      "output": "C:\\fireplay\\app\\.cxx\\Debug\\5u443a4e\\arm64-v8a\\libllhttp.a"
+    },
+    "playfair::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "playfair",
+      "output": "C:\\fireplay\\app\\.cxx\\Debug\\5u443a4e\\arm64-v8a\\libplayfair.a"
+    },
+    "plist::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "plist",
+      "output": "C:\\fireplay\\app\\.cxx\\Debug\\5u443a4e\\arm64-v8a\\libplist.a"
     }
   },
   "toolchains": {
@@ -31,7 +55,9 @@
       "cppCompilerExecutable": "C:\\android\\android-ndk-r27d\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
     }
   },
-  "cFileExtensions": [],
+  "cFileExtensions": [
+    "c"
+  ],
   "cppFileExtensions": [
     "cpp"
   ]
