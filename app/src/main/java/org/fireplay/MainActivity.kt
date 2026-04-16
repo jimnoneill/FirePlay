@@ -38,8 +38,8 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         }
         @JvmStatic
         fun onConnectionStart() {
-            // Bring Activity to foreground when iPhone connects, so Surface exists.
             val ctx = appContext ?: instance ?: return
+            Log.i(TAG, "onConnectionStart: launching Activity from ${ctx.javaClass.simpleName}")
             val intent = Intent(ctx, MainActivity::class.java).apply {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or
                         Intent.FLAG_ACTIVITY_REORDER_TO_FRONT

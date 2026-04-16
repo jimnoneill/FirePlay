@@ -38,6 +38,7 @@ class FirePlayService : Service() {
         createChannel()
         startForegroundWithNotif()
         acquireMulticastLock()
+        MainActivity.appContext = applicationContext
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
