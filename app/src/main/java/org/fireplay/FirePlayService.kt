@@ -46,7 +46,8 @@ class FirePlayService : Service() {
             started = true
             generateDeviceId()
             Thread { startJmdns() }.start()
-            MainActivity.nativeStart("FirePlay", AIRPLAY_PORT, RAOP_PORT, deviceMac, devicePi)
+            val keyFile = filesDir.resolve("airplay.key").absolutePath
+            MainActivity.nativeStart("FirePlay", AIRPLAY_PORT, RAOP_PORT, deviceMac, devicePi, keyFile)
         }
         return START_STICKY
     }

@@ -21,7 +21,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         private const val TAG = "FirePlay"
         init { System.loadLibrary("fireplay") }
 
-        @JvmStatic external fun nativeStart(name: String, airplayPort: Int, raopPort: Int, mac: String, pi: String): Int
+        @JvmStatic external fun nativeStart(name: String, airplayPort: Int, raopPort: Int, mac: String, pi: String, keyFile: String): Int
         @JvmStatic external fun nativeStop()
         @JvmStatic external fun nativeSetSurface(surface: Surface?)
         @JvmStatic external fun nativeGetTxtRecordsAirplay(): Map<String, String>

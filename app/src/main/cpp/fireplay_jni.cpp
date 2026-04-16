@@ -43,9 +43,10 @@ dnssd_t  *g_dnssd = nullptr;
 logger_t *g_logger = nullptr;
 
 void log_cb(void *, int level, const char *msg) {
-    int prio = (level >= LOGGER_DEBUG) ? ANDROID_LOG_DEBUG :
-               (level >= LOGGER_INFO)  ? ANDROID_LOG_INFO  :
-               (level >= LOGGER_WARNING)  ? ANDROID_LOG_WARN  : ANDROID_LOG_ERROR;
+    /* Map all UxPlay levels to at least INFO so logcat shows them.
+       Android's default logcat filter hides DEBUG. */
+    int prio = (level <= LOGGER_ERR)     ? ANDROID_LOG_ERROR :
+               (level <= LOGGER_WARNING) ? ANDROID_LOG_WARN  : ANDROID_LOG_INFO;
     __android_log_print(prio, "FirePlay-uxplay", "%s", msg);
 }
 
@@ -128,15 +129,19 @@ extern "C" {
 
 static char g_mac_str[32] = "00:15:5d:62:9a:dd";
 static char g_pi_str[64] = "00000000-0000-0000-0000-000000000000";
+static char g_keyfile[512] = "";
 
 JNIEXPORT jint JNICALL
-Java_org_fireplay_MainActivity_nativeStart(JNIEnv *env, jclass, jstring jname, jint airplayPort, jint raopPort, jstring jmac, jstring jpi) {
+Java_org_fireplay_MainActivity_nativeStart(JNIEnv *env, jclass, jstring jname, jint airplayPort, jint raopPort, jstring jmac, jstring jpi, jstring jkeyfile) {
     const char *name = env->GetStringUTFChars(jname, nullptr);
     const char *mac  = env->GetStringUTFChars(jmac, nullptr);
     const char *pi   = env->GetStringUTFChars(jpi, nullptr);
-    LOGI("nativeStart name=%s airplay=%d raop=%d mac=%s pi=%s", name, airplayPort, raopPort, mac, pi);
+    const char *kf   = env->GetStringUTFChars(jkeyfile, nullptr);
+    LOGI("nativeStart name=%s airplay=%d raop=%d mac=%s pi=%s keyfile=%s", name, airplayPort, raopPort, mac, pi, kf);
     strncpy(g_mac_str, mac, sizeof(g_mac_str)-1);
     strncpy(g_pi_str, pi, sizeof(g_pi_str)-1);
+    strncpy(g_keyfile, kf, sizeof(g_keyfile)-1);
+    env->ReleaseStringUTFChars(jkeyfile, kf);
     env->ReleaseStringUTFChars(jmac, mac);
     env->ReleaseStringUTFChars(jpi, pi);
 
@@ -223,7 +228,7 @@ Java_org_fireplay_MainActivity_nativeStart(JNIEnv *env, jclass, jstring jname, j
     raop_set_dnssd(g_raop, g_dnssd);
 
     LOGI("calling raop_init2");
-    int r2 = raop_init2(g_raop, /*nohold=*/1, g_mac_str, /*keyfile=*/"");
+    int r2 = raop_init2(g_raop, /*nohold=*/1, g_mac_str, g_keyfile);
     LOGI("raop_init2 rc=%d", r2);
 
     /* Enable HLS so iPhone's GET / probe is accepted. Also set video lang so
