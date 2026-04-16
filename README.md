@@ -45,18 +45,35 @@ What FirePlay does **not** do (yet):
 
 ## Install
 
-### Sideload the APK
+### 🟢 Easiest — install on your Fire TV remote, no computer needed
 
-Pre-built APKs are attached to each [GitHub release](https://github.com/jimnoneill/FirePlay/releases). On your Fire TV:
-
-1. Settings → My Fire TV → Developer Options → enable **ADB Debugging** and **Install unknown apps**.
-2. From your computer:
-   ```bash
-   adb connect <fire-tv-ip>:5555
-   adb install fireplay-v0.1.0-debug.apk
+1. On your Fire TV, install the free **Downloader** app from the Amazon Appstore (search "Downloader" by AFTVnews).
+2. On the Fire TV, go to **Settings → My Fire TV → Developer Options** and turn on **Install unknown apps** for the Downloader app. (If you don't see Developer Options: Settings → My Fire TV → About → click "Fire TV" 7 times, then go back.)
+3. Open Downloader, type this URL into the address bar:
    ```
-3. Launch FirePlay from the Apps row. A black fullscreen surface confirms it's listening.
-4. On your iPhone, open Music or Photos → AirPlay → pick **FirePlay**.
+   is.gd/fireplay_tv
+   ```
+4. Press **Go**. Downloader will fetch the latest FirePlay APK.
+5. Press **Install** when the APK opens. Then **Open** to launch FirePlay (you'll see a black fullscreen — that's correct, it's now listening).
+6. On your iPhone: Music or Photos → AirPlay icon → pick **FirePlay**.
+
+### 🔵 Power users — sideload via ADB
+
+```bash
+adb connect <fire-tv-ip>:5555
+adb install fireplay-v0.1.0-debug.apk
+```
+
+APK attached to every [GitHub release](https://github.com/jimnoneill/FirePlay/releases).
+
+### 🟣 F-Droid (coming soon)
+
+F-Droid metadata is included under `fastlane/metadata/` and `metadata/`. Once
+the app stabilizes past v0.2, we'll submit a merge request to the
+[fdroiddata](https://gitlab.com/fdroid/fdroiddata) repo so installs and
+updates flow through the F-Droid client. (Amazon Appstore is intentionally
+**not** a target — Apple has a history of DMCA-noticing AirPlay
+reimplementations, and Amazon doesn't want that risk on their store.)
 
 ### Notes for Fire TV Cube 3rd Gen (AFTGAZL)
 

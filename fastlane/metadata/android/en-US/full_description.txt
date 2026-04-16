@@ -1,0 +1,13 @@
+FirePlay turns your Fire TV (or any Android TV running Android 9+) into a working AirPlay 2 receiver, with no purchase, ads, or proprietary cloud services.
+
+What it does:
+* Music app: lossless ALAC audio plays through your TV speakers.
+* Photos still: full-resolution photo appears on the TV.
+* Photos video: H.264 video with AAC-ELD audio.
+* Pairs with iOS 17 / iOS 18 (full FairPlay 2-round handshake).
+
+What it does not do (yet):
+* iPhone screen mirroring from Control Center (planned for v0.2).
+* DRM-protected video (Netflix, Disney+) — Apple's FairPlay DRM blocks every non-licensed receiver.
+
+Built on UxPlay (GPL-3) with native Android renderers using AAudio for sound and MediaCodec for video. No GStreamer, no Termux, no X server.

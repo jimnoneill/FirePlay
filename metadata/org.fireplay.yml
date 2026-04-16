@@ -1,0 +1,33 @@
+Categories:
+  - Multimedia
+License: GPL-3.0-only
+SourceCode: https://github.com/jimnoneill/FirePlay
+IssueTracker: https://github.com/jimnoneill/FirePlay/issues
+Donate: https://paypal.me/jimnoneill
+
+AutoName: FirePlay
+Description: |
+    FirePlay is an open-source AirPlay 2 receiver for Fire TV and Android TV
+    devices. It pairs with iOS 17/18 and renders Music (ALAC), Photos
+    (still + H.264 video), and AirPlay-cast videos with sound.
+
+    What it does NOT do (yet):
+    * iPhone screen mirroring from Control Center
+    * Netflix / Disney+ casting (Apple FairPlay DRM blocks non-licensed receivers)
+
+RepoType: git
+Repo: https://github.com/jimnoneill/FirePlay
+
+Builds:
+  - versionName: 0.1.0
+    versionCode: 1
+    commit: v0.1.0
+    subdir: app
+    gradle:
+      - yes
+    submodules: true
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 0.1.0
+CurrentVersionCode: 1
