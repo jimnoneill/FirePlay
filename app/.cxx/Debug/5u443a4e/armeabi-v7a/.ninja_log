@@ -64,3 +64,10 @@
 1083	1269	7980702628841056	C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so	40a65fab40a0f5a9
 6	1149	7980703770934272	CMakeFiles/fireplay.dir/video_renderer_mediacodec.cpp.o	9889ecdb32c26749
 1149	1373	7980703772920969	C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so	40a65fab40a0f5a9
+7	815	7980710941237156	CMakeFiles/fireplay.dir/fireplay_jni.cpp.o	5c14c9a930bf6a8d
+816	1021	7980710943182239	C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so	40a65fab40a0f5a9
+9	748	7980713091307623	CMakeFiles/fireplay.dir/fireplay_jni.cpp.o	5c14c9a930bf6a8d
+18	1179	7980713095538530	CMakeFiles/fireplay.dir/audio_renderer_aaudio.cpp.o	e446e4a9fc9e36d2
+1180	1395	7980713097544782	C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so	40a65fab40a0f5a9
+10	1192	7980716966704018	CMakeFiles/fireplay.dir/audio_renderer_aaudio.cpp.o	e446e4a9fc9e36d2
+1193	1382	7980716968445103	C:/fireplay/app/build/intermediates/cxx/Debug/5u443a4e/obj/armeabi-v7a/libfireplay.so	40a65fab40a0f5a9

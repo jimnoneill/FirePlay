@@ -37,8 +37,15 @@ void log_cb(void *, int level, const char *msg) {
 
 void cb_audio_process(void *, raop_ntp_t *, audio_decode_struct *data) {
     if (!data || data->data_len <= 0) return;
+    static unsigned char last_ct = 0xff;
+    if (data->ct != last_ct) {
+        LOGI("audio ct changed: %u -> %u (len=%d)", last_ct, data->ct, data->data_len);
+        last_ct = data->ct;
+    }
     if (data->ct == 2) {
         fireplay_audio_push_alac(data->data, data->data_len);
+    } else if (data->ct == 8) {
+        fireplay_audio_push_aac_eld(data->data, data->data_len);
     }
 }
 void cb_conn_init_renderer(void *)    { fireplay_audio_init();     LOGI("conn_init"); }
