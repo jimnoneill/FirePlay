@@ -59,6 +59,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         surfaceView.holder.addCallback(this)
         instance = this
         appContext = applicationContext
+        scheduleAutoStart()
 
         val intent = Intent(this, FirePlayService::class.java)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) startForegroundService(intent)
@@ -69,6 +70,19 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
     override fun onDestroy() {
         super.onDestroy()
         if (instance === this) instance = null
+    }
+
+    private fun scheduleAutoStart() {
+        val req = androidx.work.PeriodicWorkRequestBuilder<StartWorker>(
+            15, java.util.concurrent.TimeUnit.MINUTES
+        ).build()
+        androidx.work.WorkManager.getInstance(this)
+            .enqueueUniquePeriodicWork(
+                "fireplay-keepalive",
+                androidx.work.ExistingPeriodicWorkPolicy.KEEP,
+                req
+            )
+        Log.i(TAG, "WorkManager keepalive scheduled")
     }
 
     override fun surfaceCreated(holder: SurfaceHolder) {

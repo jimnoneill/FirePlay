@@ -58,4 +58,5 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.leanback:leanback:1.0.0")  // Android TV UI
     implementation("org.jmdns:jmdns:3.5.9")              // Apple-compatible mDNS
+    implementation("androidx.work:work-runtime-ktx:2.9.0") // Persistent boot-start
 }
