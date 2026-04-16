@@ -42,7 +42,10 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
             Log.i(TAG, "onConnectionStart: launching Activity from ${ctx.javaClass.simpleName}")
             val intent = Intent(ctx, MainActivity::class.java).apply {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or
-                        Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                        Intent.FLAG_ACTIVITY_REORDER_TO_FRONT or
+                        Intent.FLAG_ACTIVITY_CLEAR_TOP
+                addCategory(Intent.CATEGORY_LAUNCHER)
+                action = Intent.ACTION_MAIN
             }
             ctx.startActivity(intent)
         }
