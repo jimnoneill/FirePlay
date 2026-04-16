@@ -1,8 +1,0 @@
-C:/fireplay/app/.cxx/Debug/5u443a4e/arm64-v8a/CMakeFiles/alac_dec.dir
-C:/fireplay/app/.cxx/Debug/5u443a4e/arm64-v8a/CMakeFiles/plist.dir
-C:/fireplay/app/.cxx/Debug/5u443a4e/arm64-v8a/CMakeFiles/llhttp.dir
-C:/fireplay/app/.cxx/Debug/5u443a4e/arm64-v8a/CMakeFiles/playfair.dir
-C:/fireplay/app/.cxx/Debug/5u443a4e/arm64-v8a/CMakeFiles/airplay.dir
-C:/fireplay/app/.cxx/Debug/5u443a4e/arm64-v8a/CMakeFiles/fireplay.dir
-C:/fireplay/app/.cxx/Debug/5u443a4e/arm64-v8a/CMakeFiles/edit_cache.dir
-C:/fireplay/app/.cxx/Debug/5u443a4e/arm64-v8a/CMakeFiles/rebuild_cache.dir

@@ -1,1 +1,0 @@
-C:\fireplay\app\src\main\cpp\CMakeLists.txt
