@@ -10,14 +10,14 @@ import androidx.work.WorkerParameters
 class StartWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params) {
     override fun doWork(): Result {
         Log.i("FirePlay", "StartWorker: launching Activity + Service")
-        val act = Intent(applicationContext, MainActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or
-                    Intent.FLAG_ACTIVITY_CLEAR_TOP or
-                    Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
-            addCategory(Intent.CATEGORY_LAUNCHER)
-            action = Intent.ACTION_MAIN
+        // Only start the Service (for Music/audio). Activity launches
+        // automatically when iPhone sends video (onConnectionStart).
+        val svc = Intent(applicationContext, FirePlayService::class.java)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            applicationContext.startForegroundService(svc)
+        } else {
+            applicationContext.startService(svc)
         }
-        applicationContext.startActivity(act)
         return Result.success()
     }
 }
