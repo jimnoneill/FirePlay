@@ -8,11 +8,13 @@ import android.util.Log
 import android.view.Surface
 import android.view.SurfaceHolder
 import android.view.SurfaceView
+import android.view.View
 import android.view.WindowManager
 
 class MainActivity : Activity(), SurfaceHolder.Callback {
 
     private lateinit var surfaceView: SurfaceView
+    private var splash: View? = null
 
     companion object {
         private const val TAG = "FirePlay"
@@ -25,8 +27,12 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         @JvmStatic external fun nativeGetTxtRecordsRaop(): Map<String, String>
 
         // Renderer notifies us when first video frame renders so we hide splash.
-        @JvmStatic fun onFirstFrame() {}
-        @JvmStatic fun onMediaIdle() {}
+        @JvmStatic fun onFirstFrame() {
+            instance?.runOnUiThread { instance?.splash?.visibility = View.GONE }
+        }
+        @JvmStatic fun onMediaIdle() {
+            instance?.runOnUiThread { instance?.splash?.visibility = View.VISIBLE }
+        }
         @JvmStatic
         fun onConnectionStart() {
             val ctx = appContext ?: instance ?: return
@@ -49,6 +55,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         setContentView(R.layout.activity_main)
         surfaceView = findViewById(R.id.surface)
+        splash = findViewById(R.id.splash)
         surfaceView.holder.addCallback(this)
         instance = this
         appContext = applicationContext
