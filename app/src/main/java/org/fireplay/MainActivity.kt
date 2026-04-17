@@ -8,14 +8,11 @@ import android.util.Log
 import android.view.Surface
 import android.view.SurfaceHolder
 import android.view.SurfaceView
-import android.view.View
 import android.view.WindowManager
-import android.widget.LinearLayout
 
 class MainActivity : Activity(), SurfaceHolder.Callback {
 
     private lateinit var surfaceView: SurfaceView
-    private lateinit var splash: LinearLayout
 
     companion object {
         private const val TAG = "FirePlay"
@@ -28,14 +25,8 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         @JvmStatic external fun nativeGetTxtRecordsRaop(): Map<String, String>
 
         // Renderer notifies us when first video frame renders so we hide splash.
-        @JvmStatic
-        fun onFirstFrame() {
-            instance?.runOnUiThread { instance?.showVideo() }
-        }
-        @JvmStatic
-        fun onMediaIdle() {
-            instance?.runOnUiThread { instance?.showSplash() }
-        }
+        @JvmStatic fun onFirstFrame() {}
+        @JvmStatic fun onMediaIdle() {}
         @JvmStatic
         fun onConnectionStart() {
             val ctx = appContext ?: instance ?: return
@@ -58,7 +49,6 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         setContentView(R.layout.activity_main)
         surfaceView = findViewById(R.id.surface)
-        splash = findViewById(R.id.splash)
         surfaceView.holder.addCallback(this)
         instance = this
         appContext = applicationContext
@@ -101,12 +91,4 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         nativeSetSurface(null)
     }
 
-    fun showVideo() {
-        surfaceView.visibility = View.VISIBLE
-        splash.visibility = View.INVISIBLE
-    }
-    fun showSplash() {
-        surfaceView.visibility = View.INVISIBLE
-        splash.visibility = View.VISIBLE
-    }
 }

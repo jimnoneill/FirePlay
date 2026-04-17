@@ -428,12 +428,10 @@ raop_rtp_mirror_thread(void *arg)
                  * flag will be set to false after it has been prepended.  */
 
                 if (prepend_sps_pps & (ntp_timestamp_raw != ntp_timestamp_nal)) {
-                        logger_log(raop_rtp_mirror->logger, LOGGER_DEBUG,
-                                   "raop_rtp_mirror: prepended sps_pps timestamp does not match timestamp of "
-                                   "video payload\n%llu\n%llu , discarding", ntp_timestamp_raw, ntp_timestamp_nal);
-                        free (sps_pps);
-                        sps_pps = NULL;
-                        prepend_sps_pps = false;
+                        logger_log(raop_rtp_mirror->logger, LOGGER_INFO,
+                                   "raop_rtp_mirror: sps_pps timestamp mismatch (%llu vs %llu) — prepending anyway",
+                                   ntp_timestamp_raw, ntp_timestamp_nal);
+                        /* Don't discard: MediaCodec NEEDS SPS+PPS to decode. */
                 }
 		
                 if (prepend_sps_pps) {
