@@ -5,7 +5,7 @@
 <h1 align="center">FirePlay</h1>
 
 <p align="center">
-  <strong>Open-source AirPlay 2 receiver for Fire TV &amp; Android</strong>
+  <strong>Open-source AirPlay 2 Apple Device receiver for Fire TV &amp; Android</strong>
 </p>
 
 <p align="center">
