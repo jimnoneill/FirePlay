@@ -54,6 +54,18 @@ jobs:
         with:
           gradle-version: "8.7"
 
+      - name: Fetch prebuilt OpenSSL libs from upstream KDAB/android_openssl
+        run: |
+          # .gitignore excludes *.a, so CI needs to pull these from upstream.
+          git clone --depth 1 https://github.com/KDAB/android_openssl /tmp/kdab-ssl
+          for ABI in arm64-v8a armeabi-v7a x86 x86_64; do
+            mkdir -p "third_party/android_openssl/ssl_3/$ABI"
+            if [ -d "/tmp/kdab-ssl/ssl_3/$ABI" ]; then
+              cp -v /tmp/kdab-ssl/ssl_3/$ABI/*.a \
+                   "third_party/android_openssl/ssl_3/$ABI/"
+            fi
+          done
+
       - name: Build release APK
         run: |
           gradle :app:assembleRelease --no-daemon || \
