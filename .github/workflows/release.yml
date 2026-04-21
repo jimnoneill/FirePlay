@@ -50,13 +50,14 @@ jobs:
         with:
           packages: "platforms;android-28 platforms;android-34 build-tools;34.0.0 ndk;27.0.12077973"
 
-      - name: Gradle permissions
-        run: chmod +x ./gradlew || true
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.7"
 
       - name: Build release APK
         run: |
-          ./gradlew :app:assembleRelease --no-daemon || \
-          ./gradlew :app:assembleDebug --no-daemon
+          gradle :app:assembleRelease --no-daemon || \
+          gradle :app:assembleDebug --no-daemon
 
       - name: Collect APK
         id: apk
