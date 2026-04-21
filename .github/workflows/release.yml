@@ -1,0 +1,102 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag to rebuild (e.g., v0.1.0)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Resolve tag and version
+        id: vars
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TAG="${{ inputs.tag }}"
+          else
+            TAG="${GITHUB_REF_NAME}"
+          fi
+          VERSION="${TAG#v}"
+          echo "tag=$TAG"         >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Check gradle versionName matches tag
+        run: |
+          GRADLE_VER=$(grep -oP 'versionName\s*=\s*"\K[^"]+' app/build.gradle.kts | head -1)
+          if [ "$GRADLE_VER" != "${{ steps.vars.outputs.version }}" ]; then
+            echo "::error::versionName in app/build.gradle.kts ($GRADLE_VER) does not match tag ${{ steps.vars.outputs.version }}"
+            exit 1
+          fi
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: "platforms;android-28 platforms;android-34 build-tools;34.0.0 ndk;27.0.12077973"
+
+      - name: Gradle permissions
+        run: chmod +x ./gradlew || true
+
+      - name: Build release APK
+        run: |
+          ./gradlew :app:assembleRelease --no-daemon || \
+          ./gradlew :app:assembleDebug --no-daemon
+
+      - name: Collect APK
+        id: apk
+        run: |
+          APK=$(find app/build/outputs/apk -type f -name "*.apk" | head -1)
+          if [ -z "$APK" ]; then
+            echo "::error::No APK produced"
+            exit 1
+          fi
+          DEST="FirePlay-${{ steps.vars.outputs.tag }}.apk"
+          cp "$APK" "$DEST"
+          sha256sum "$DEST" | tee "${DEST}.sha256"
+          echo "path=$DEST" >> "$GITHUB_OUTPUT"
+
+      - name: Extract changelog entry
+        run: |
+          awk '/^## \[${{ steps.vars.outputs.version }}\]/{flag=1; next} /^## \[/{flag=0} flag' CHANGELOG.md > RELEASE_NOTES.md
+          if [ ! -s RELEASE_NOTES.md ]; then
+            echo "See git log for ${{ steps.vars.outputs.tag }}." > RELEASE_NOTES.md
+          fi
+          {
+            echo
+            echo "### Install"
+            echo
+            echo "Download the APK below and sideload it on your Fire TV:"
+            echo
+            echo '```bash'
+            echo "adb connect <fire-tv-ip>:5555"
+            echo "adb install FirePlay-${{ steps.vars.outputs.tag }}.apk"
+            echo '```'
+            echo
+            echo "Or use the Downloader app on Fire TV to fetch the APK URL directly."
+          } >> RELEASE_NOTES.md
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.vars.outputs.tag }}
+          name: ${{ steps.vars.outputs.version }}
+          body_path: RELEASE_NOTES.md
+          files: |
+            ${{ steps.apk.outputs.path }}
+            ${{ steps.apk.outputs.path }}.sha256
+          make_latest: true
