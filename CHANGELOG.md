@@ -5,6 +5,21 @@ Versions follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.4] 2026-04-21
+
+CI fixes. No runtime behavior change.
+
+* Release builds now succeed on their own task instead of the workflow
+  silently falling back to `assembleDebug`. Release APKs are signed
+  with the debug keystore, which keeps them sideloadable on Fire TV.
+  F-Droid rebuilds from source and signs with its own key.
+* Disabled the `ExpiredTargetSdkVersion` and `OldTargetApi` lint checks
+  for release builds. `targetSdk = 28` is intentional here because the
+  app targets Fire OS 7 specifically. The Google Play requirement does
+  not apply.
+* Legal posture section added to the README making the DRM-respecting,
+  no-Apple-code, clean-room interoperability stance explicit.
+
 ## [0.1.3] 2026-04-21
 
 First automated release built by CI. No runtime changes from 0.1.2.
@@ -47,7 +62,8 @@ Known gaps: no iPhone screen mirroring from Control Center, and no
 DRM-protected casts (Netflix, Disney+, etc.) because those require a
 FairPlay license Apple doesn't grant to non-certified receivers.
 
-[Unreleased]: https://github.com/jimnoneill/FirePlay/compare/v0.1.3...HEAD
+[Unreleased]: https://github.com/jimnoneill/FirePlay/compare/v0.1.4...HEAD
+[0.1.4]: https://github.com/jimnoneill/FirePlay/releases/tag/v0.1.4
 [0.1.3]: https://github.com/jimnoneill/FirePlay/releases/tag/v0.1.3
 [0.1.2]: https://github.com/jimnoneill/FirePlay/releases/tag/v0.1.2
 [0.1.1]: https://github.com/jimnoneill/FirePlay/releases/tag/v0.1.1

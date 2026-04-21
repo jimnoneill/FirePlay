@@ -60,7 +60,7 @@ FirePlay from the device list.
 
 ```bash
 adb connect <fire-tv-ip>:5555
-adb install FirePlay-v0.1.3.apk
+adb install FirePlay-v0.1.4.apk
 ```
 
 APKs are attached to every [GitHub release](https://github.com/jimnoneill/FirePlay/releases).

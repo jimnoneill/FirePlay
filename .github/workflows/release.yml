@@ -67,9 +67,7 @@ jobs:
           done
 
       - name: Build release APK
-        run: |
-          gradle :app:assembleRelease --no-daemon || \
-          gradle :app:assembleDebug --no-daemon
+        run: gradle :app:assembleRelease --no-daemon --stacktrace
 
       - name: Collect APK
         id: apk

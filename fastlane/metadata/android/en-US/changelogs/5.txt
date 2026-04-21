@@ -1,0 +1,3 @@
+CI now produces proper release-optimized APKs signed with the debug
+keystore, instead of silently falling back to debug builds. No runtime
+behavior change.

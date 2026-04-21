@@ -12,8 +12,8 @@ android {
         applicationId = "org.fireplay"
         minSdk = 28        // Fire OS 7 = Android 9
         targetSdk = 28     // targeting Fire OS 7 specifically for AFTGAZL
-        versionCode = 4
-        versionName = "0.1.3"
+        versionCode = 5
+        versionName = "0.1.4"
 
         ndk {
             abiFilters += listOf("armeabi-v7a", "arm64-v8a")
@@ -49,7 +49,18 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
+            // Sign release builds with the debug keystore so the APK is
+            // installable via sideload. F-Droid rebuilds from source and
+            // signs with its own key; Play Store is not a target.
+            signingConfig = signingConfigs.getByName("debug")
         }
+    }
+
+    // targetSdk = 28 is intentional for Fire OS 7 (AFTGAZL). The Google
+    // Play API-level lint check does not apply to this project.
+    lint {
+        disable += setOf("ExpiredTargetSdkVersion", "OldTargetApi")
+        checkReleaseBuilds = false
     }
 }
 
