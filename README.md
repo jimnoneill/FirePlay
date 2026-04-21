@@ -159,6 +159,42 @@ This project stands on top of other people's work:
 - [jmdns/jmdns](https://github.com/jmdns/jmdns), Apple-compatible Bonjour
   in pure Java.
 
+## Legal posture
+
+I'm not a lawyer and this is not legal advice. It's a description of what
+this project does and doesn't do, in case someone ever asks.
+
+FirePlay contains no Apple code, no Apple-signed binaries, no Apple SDK,
+and no files redistributed from Apple's developer resources. The protocol
+implementation under `lib-uxplay/` is vendored from
+[FDH2/UxPlay](https://github.com/FDH2/UxPlay), a GPL-3 clean-room reverse
+engineering project that has been public on GitHub since 2020. The ALAC
+decoder is Apple's own open-source release under the APSL. OpenSSL,
+libplist, and JmDNS are their respective upstream licenses. The Kotlin
+and native C glue code in this repo is GPL-3 via UxPlay.
+
+The project does not attempt to circumvent any DRM. FairPlay-protected
+content from Netflix, Disney+, HBO, and anything else that asks the
+receiver to prove a FairPlay license cannot play through FirePlay, and
+that is by design. If those services played through a non-Apple
+receiver, that would be a DRM bypass. They don't, and this project
+doesn't try to make them.
+
+FirePlay is an interoperability tool. It exists to let an Android or
+Fire OS device act as a generic AirPlay 2 receiver for content the user
+already has the right to watch or listen to. Photos from your own camera
+roll, music you own or subscribe to, videos from apps that cast without
+DRM. That's the whole scope.
+
+"AirPlay" appears in this README as a descriptive term for the
+Apple-defined protocol this receiver speaks. No Apple trademarks or logos
+are used in branding. The app is not distributed on the Amazon Appstore,
+and any future store distribution (F-Droid, direct APK) will carry the
+same posture.
+
+If you're Apple and you have concerns, open an issue. I'd rather have
+the conversation than a surprise DMCA.
+
 ## Support
 
 If FirePlay saved you the AirReceiver subscription, or if you just think
