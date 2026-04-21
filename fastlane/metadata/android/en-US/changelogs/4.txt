@@ -1,0 +1,2 @@
+First automated release. CI now builds and signs the APK on every
+tag push. README rewritten. No runtime behavior change from 0.1.2.
