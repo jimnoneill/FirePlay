@@ -4,12 +4,14 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.util.Log
 import android.view.Surface
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.view.View
 import android.view.WindowManager
+import android.widget.FrameLayout
 
 class MainActivity : Activity(), SurfaceHolder.Callback {
 
@@ -31,7 +33,13 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
             instance?.runOnUiThread { instance?.splash?.visibility = View.GONE }
         }
         @JvmStatic fun onMediaIdle() {
-            instance?.runOnUiThread { instance?.splash?.visibility = View.VISIBLE }
+            instance?.runOnUiThread {
+                instance?.splash?.visibility = View.VISIBLE
+                instance?.moveTaskToBack(true)
+            }
+        }
+        @JvmStatic fun onVideoSizeChanged(width: Int, height: Int) {
+            instance?.runOnUiThread { instance?.applyAspectRatio(width, height) }
         }
         @JvmStatic
         fun onConnectionStart() {
@@ -83,6 +91,30 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
                 req
             )
         Log.i(TAG, "WorkManager keepalive scheduled")
+    }
+
+    fun applyAspectRatio(videoWidth: Int, videoHeight: Int) {
+        if (videoWidth <= 0 || videoHeight <= 0) return
+        val metrics = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(metrics)
+        val screenW = metrics.widthPixels
+        val screenH = metrics.heightPixels
+
+        val videoAR = videoWidth.toFloat() / videoHeight.toFloat()
+        val screenAR = screenW.toFloat() / screenH.toFloat()
+
+        val (viewW, viewH) = if (videoAR > screenAR) {
+            screenW to (screenW / videoAR).toInt()
+        } else {
+            (screenH * videoAR).toInt() to screenH
+        }
+
+        val lp = surfaceView.layoutParams as FrameLayout.LayoutParams
+        lp.width = viewW
+        lp.height = viewH
+        lp.gravity = android.view.Gravity.CENTER
+        surfaceView.layoutParams = lp
+        Log.i(TAG, "aspect ratio applied: video=${videoWidth}x${videoHeight} -> view=${viewW}x${viewH} (screen=${screenW}x${screenH})")
     }
 
     override fun surfaceCreated(holder: SurfaceHolder) {

@@ -5,6 +5,21 @@ Versions follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.2.0] 2026-05-16
+
+Screen mirroring aspect ratio and multi-session fixes.
+
+* Preserve iPhone aspect ratio during screen mirroring instead of
+  stretching to fill the TV. The SurfaceView is now dynamically resized
+  based on the source dimensions reported by the mirror protocol.
+* Fix reconnection bug where only the first user to mirror could use it.
+  Subsequent connections failed silently because the native window
+  reference was released on disconnect. The codec is now torn down
+  independently of the Surface lifecycle.
+* Stop blocking the Fire TV's native Android mirroring (Miracast). When
+  an AirPlay session ends, FirePlay moves itself to the background so
+  the system Miracast receiver and normal Fire TV UI can function.
+
 ## [0.1.4] 2026-04-21
 
 CI fixes. No runtime behavior change.
@@ -62,7 +77,8 @@ Known gaps: no iPhone screen mirroring from Control Center, and no
 DRM-protected casts (Netflix, Disney+, etc.) because those require a
 FairPlay license Apple doesn't grant to non-certified receivers.
 
-[Unreleased]: https://github.com/jimnoneill/FirePlay/compare/v0.1.4...HEAD
+[Unreleased]: https://github.com/jimnoneill/FirePlay/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/jimnoneill/FirePlay/releases/tag/v0.2.0
 [0.1.4]: https://github.com/jimnoneill/FirePlay/releases/tag/v0.1.4
 [0.1.3]: https://github.com/jimnoneill/FirePlay/releases/tag/v0.1.3
 [0.1.2]: https://github.com/jimnoneill/FirePlay/releases/tag/v0.1.2

@@ -98,7 +98,28 @@ void cb_audio_get_format(void *, unsigned char *ct, unsigned short *spf, bool *u
          ct?*ct:0, spf?*spf:0, usingScreen?*usingScreen:0, isMedia?*isMedia:0,
          audioFormat?(unsigned long long)*audioFormat:0);
 }
-void cb_video_report_size(void *, float *, float *, float *, float *)          {}
+void cb_video_report_size(void *, float *width_source, float *height_source, float *width, float *height) {
+    int w = width_source ? (int)*width_source : 0;
+    int h = height_source ? (int)*height_source : 0;
+    if (w <= 0 || h <= 0) {
+        w = width ? (int)*width : 0;
+        h = height ? (int)*height : 0;
+    }
+    if (w > 0 && h > 0) {
+        LOGI("video_report_size: %dx%d", w, h);
+        fireplay_video_set_source_size(w, h);
+        if (!g_jvm || !g_main_class) return;
+        JNIEnv *env = nullptr;
+        bool attached = false;
+        if (g_jvm->GetEnv((void **)&env, JNI_VERSION_1_6) != JNI_OK) {
+            if (g_jvm->AttachCurrentThread(&env, nullptr) != JNI_OK) return;
+            attached = true;
+        }
+        jmethodID m = env->GetStaticMethodID(g_main_class, "onVideoSizeChanged", "(II)V");
+        if (m) env->CallStaticVoidMethod(g_main_class, m, w, h);
+        if (attached) g_jvm->DetachCurrentThread();
+    }
+}
 void cb_mirror_video_running(void *, bool running)                             { LOGI("mirror_video_running=%d", running); }
 void cb_report_client_request(void *, char *deviceid, char *model, char *name, bool *admit) {
     LOGI("client request deviceid=%s model=%s name=%s", deviceid?deviceid:"", model?model:"", name?name:"");

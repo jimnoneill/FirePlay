@@ -12,8 +12,8 @@ android {
         applicationId = "org.fireplay"
         minSdk = 28        // Fire OS 7 = Android 9
         targetSdk = 28     // targeting Fire OS 7 specifically for AFTGAZL
-        versionCode = 5
-        versionName = "0.1.4"
+        versionCode = 6
+        versionName = "0.2.0"
 
         ndk {
             abiFilters += listOf("armeabi-v7a", "arm64-v8a")

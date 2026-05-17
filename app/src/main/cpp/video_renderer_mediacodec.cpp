@@ -51,6 +51,8 @@ bool           g_csd_sent = false;
 std::thread    g_drain_thread;
 std::atomic<bool> g_drain_run{false};
 std::vector<uint8_t> g_sps_pps;
+int g_source_width = 1920;
+int g_source_height = 1080;
 
 void drain_loop() {
     int rendered = 0;
@@ -145,10 +147,19 @@ void fireplay_video_set_surface(void *anw) {
              ANativeWindow_getHeight(g_window));
         // If we have buffered SPS+PPS but no codec yet, start now.
         if (!g_codec && !g_sps_pps.empty()) {
-            start_codec_locked(1920, 1080);
+            start_codec_locked(g_source_width, g_source_height);
         }
     } else {
         teardown_codec_locked();
+    }
+}
+
+void fireplay_video_set_source_size(int width, int height) {
+    std::lock_guard<std::mutex> g(g_lock);
+    if (width > 0 && height > 0) {
+        g_source_width = width;
+        g_source_height = height;
+        LOGI("source size set %dx%d", width, height);
     }
 }
 
@@ -186,7 +197,7 @@ void fireplay_video_push_nal(const uint8_t *data, int len, uint64_t pts_ntp) {
     if (!g_window) return;  // No Surface yet — frames buffered via SPS+PPS extract only.
 
     if (!g_codec) {
-        if (!start_codec_locked(1920, 1080)) return;
+        if (!start_codec_locked(g_source_width, g_source_height)) return;
     }
 
     // Feed SPS+PPS as CODEC_CONFIG if not yet sent and codec just started without CSD.
@@ -232,7 +243,8 @@ void fireplay_video_push_nal(const uint8_t *data, int len, uint64_t pts_ntp) {
 void fireplay_video_shutdown() {
     std::lock_guard<std::mutex> g(g_lock);
     teardown_codec_locked();
-    if (g_window) { ANativeWindow_release(g_window); g_window = nullptr; }
     g_sps_pps.clear();
-    LOGI("shutdown");
+    g_source_width = 1920;
+    g_source_height = 1080;
+    LOGI("shutdown (codec torn down, surface retained)");
 }
