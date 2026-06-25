@@ -98,8 +98,7 @@ a platform restriction, not a bug in this project.
 | Video sound, AAC-ELD via MediaCodec to AAudio | works |
 | Per-device identity on multi-receiver LANs | works |
 | Auto-launch when iPhone connects, including cold boot | works |
-| iPhone screen mirroring | planned for v0.2 |
-| F-Droid submission | planned for v0.2 |
+| iPhone screen mirroring | works |
 
 ## How it works
 
